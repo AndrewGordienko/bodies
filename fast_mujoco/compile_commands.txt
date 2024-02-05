@@ -1,0 +1,8 @@
+python3 setup.py build_ext --inplace
+
+ 
+andrewgordienko@Andrews-MacBook-Pro fib % andrewgordienko@Andrews-MacBook-Pro testing % /usr/bin/clang++ -std=c++17 -fcolor-diagnostics -fansi-escape-codes -g \ 
+-I/Applications/mujoco.framework/Versions/A/Headers \
+-I/usr/local/include -I/opt/homebrew/opt/eigen/include/eigen3 \
+-L/opt/homebrew/lib -lglfw -F/Applications \
+-framework mujoco -Wl,-rpath,/Applications/MuJoCo.app/Contents/Frameworks \ basic.cpp -o main
