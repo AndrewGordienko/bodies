@@ -59,9 +59,9 @@ class Leg:
         self.name = name
         self.torso_size = torso_size
         # Customizable sizes for leg parts
-        self.upper_size = (upper_size[0], upper_size[1], upper_size[2]*2)
-        self.lower_size = (lower_size[0], lower_size[1], lower_size[2]*2)
-        self.foot_size = (foot_size[0], foot_size[1], foot_size[2]*2)
+        self.upper_size = upper_size
+        self.lower_size = lower_size
+        self.foot_size = foot_size
         self.subparts = 0
 
     def to_xml(self):
@@ -77,26 +77,33 @@ class Leg:
         leg = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, position))}) 
 
         # Upper part
-        upper_fromto = [0.0, 0.0, 0.0, 0.0, 0.0, -self.upper_size[2]]
+        # Adjust the position based on half of its height to place its base at the parent body's attachment point
+        upper_pos_z = -self.upper_size[2]
         ET.SubElement(leg, 'geom',
-                      attrib={'name': self.name + '_upper_geom',
-                              'type': 'box', 'fromto': ' '.join(map(str, upper_fromto)),
-                              'size': ' '.join(map(str, self.upper_size[:2]))
-                             })
+                    attrib={'name': self.name + '_upper_geom',
+                            'type': 'box', 
+                            'size': ' '.join(map(str, self.upper_size)),
+                            'pos': f'0 0 {upper_pos_z}'
+                            })
+
         ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'ball', 'damping': joint_damping['hip']})
 
         # Lower part
-        lower_fromto = [0.0, 0.0, -self.upper_size[2], 0.0, 0.0, -(self.upper_size[2] + self.lower_size[2])]
-        lower_part = ET.SubElement(leg, 'body', attrib={'name': self.name + '_lower', 'pos': ' '.join(map(str, [0.0, 0.0, -self.upper_size[2]]))})
-        ET.SubElement(lower_part, 'geom', attrib={'name': self.name + '_lower_geom', 'type': 'box', 'fromto': ' '.join(map(str, lower_fromto)), 'size': ' '.join(map(str, self.lower_size[:2]))})
+        # Position the lower part based on the total length of the upper part to continue from its end
+        lower_pos_z = upper_pos_z - self.lower_size[2]
+        lower_part = ET.SubElement(leg, 'body', attrib={'name': self.name + '_lower', 'pos': f'0 0 {lower_pos_z}'})
+        ET.SubElement(lower_part, 'geom', attrib={'name': self.name + '_lower_geom', 'type': 'box', 'size': ' '.join(map(str, self.lower_size))})
 
         # Knee joint
         ET.SubElement(lower_part, 'joint', attrib={'name': self.name + '_knee_joint', 'type': 'hinge', 'axis': '0 1 0', 'range': joint_ranges['knee'], 'damping': joint_damping['knee'], 'limited': 'true'})
 
         # Foot part
-        foot_fromto = [0.0, 0.0, -(self.upper_size[2] + self.lower_size[2]), 0.0, 0.0, -(self.upper_size[2] + self.lower_size[2] + self.foot_size[2])]
-        foot_part = ET.SubElement(lower_part, 'body', attrib={'name': self.name + '_foot', 'pos': ' '.join(map(str, [0.0, 0.0, -(self.upper_size[2] + self.lower_size[2])]))})
-        ET.SubElement(foot_part, 'geom', attrib={'name': self.name + '_foot_geom', 'type': 'box', 'fromto': ' '.join(map(str, foot_fromto)), 'size': ' '.join(map(str, self.foot_size[:2]))})
+        # Position the foot part based on the total length of the upper and lower parts to continue from its end
+        foot_pos_z = lower_pos_z - self.foot_size[2]
+        foot_part = ET.SubElement(lower_part, 'body', attrib={'name': self.name + '_foot', 'pos': f'0 0 {foot_pos_z}'})
+        ET.SubElement(foot_part, 'geom', attrib={'name': self.name + '_foot_geom', 'type': 'box', 'size': ' '.join(map(str, self.foot_size))})
+
+        # Ankle joint
         ET.SubElement(foot_part, 'joint', attrib={'name': self.name + '_ankle_joint', 'type': 'ball', 'damping': joint_damping['ankle']})
 
         self.subparts = 1  # upper part
