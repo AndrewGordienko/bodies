@@ -62,9 +62,9 @@ class Leg:
         # self.upper_size = (random.uniform(0.02, 0.05), random.uniform(0.02, 0.05), random.uniform(0.1, 0.2))
         # self.lower_size = (random.uniform(0.02, 0.05), random.uniform(0.02, 0.05), random.uniform(0.1, 0.2))
         # self.foot_size = (random.uniform(0.02, 0.05), random.uniform(0.05, 0.1), random.uniform(0.05, 0.1))
-        self.upper_size = upper_size
-        self.lower_size = lower_size
-        self.foot_size = foot_size
+        self.upper_size = (upper_size[0], upper_size[1], upper_size[2]*2)
+        self.lower_size = (lower_size[0], lower_size[1], lower_size[2]*2)
+        self.foot_size = (foot_size[0], foot_size[1], foot_size[2]*2)
         self.subparts = 0
 
     def to_xml(self):
