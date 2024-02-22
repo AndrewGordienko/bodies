@@ -116,7 +116,9 @@ def create_ant_model(num_creatures=9):
         worldbody.append(create_flag_xml(creature_id, layer, color))
 
         num_legs = random.randint(1, 4)
-        leg_size = 0.04
+        # leg_size = 0.04
+        leg_size = (0.04, 0.01, 0.05)
+
         leg_info = []
 
         for i in range(num_legs):

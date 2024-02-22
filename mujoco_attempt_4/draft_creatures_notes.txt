@@ -1,0 +1,35 @@
+IN UNITY
+
+- segment 1
+-- size: 0.3016337 1.162111 0.5898805
+-- anchor position: 0 0 0
+
+- segment 2_1
+-- size: 0.1832931 0.8227473 0.6453129
+-- anchor position: -0.4771632 0.9999999 0.1590469
+
+- segment 2_2
+-- size: 0.1832931 0.8227473 0.6453129
+-- anchor position: -0.4771632 0.9999999 0.1590469
+
+- segment 2_3
+-- size: 0.1832931 0.8227473 0.6453129
+-- anchor position: -0.4771632 0.9999999 0.1590469
+
+- segment 3
+-- size: 
+-- anchor position:
+
+- segment 4
+-- size:
+-- anchor position:
+
+IN MUJOCO
+
+- segment 1
+-- size: 0.3016337 1.162111 0.5898805
+-- anchor position: 0 0 0
+
+- segment 2
+-- size: 0.1832931 0.8227473 0.6453129
+-- anchor position: -0.4771632 0.9999999 0.1590469
