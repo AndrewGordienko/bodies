@@ -117,7 +117,9 @@ def create_ant_model(num_creatures=9):
 
         num_legs = random.randint(1, 4)
         # leg_size = 0.04
-        leg_size = (0.02, 0.05, 0.05)
+        upper_size = (0.08, 0.08, 0.08)
+        lower_size = (0.08, 0.08, 0.08)
+        foot_size = (0.08, 0.08, 0.08)
 
         leg_info = []
 
@@ -125,7 +127,7 @@ def create_ant_model(num_creatures=9):
             leg_name = f"leg_{creature_id}_{i+1}"
 
             # Create Leg object with random edge placement
-            leg_obj = Leg(leg_name, torso_obj.size, leg_size)
+            leg_obj = Leg(leg_name, torso_obj.size, upper_size, lower_size, foot_size)
             leg_xml, foot_joint_name = leg_obj.to_xml()
             torso_xml.append(leg_xml)
 
