@@ -117,7 +117,7 @@ def create_ant_model(num_creatures=9):
 
         num_legs = random.randint(1, 4)
         # leg_size = 0.04
-        leg_size = (0.04, 0.01, 0.05)
+        leg_size = (0.02, 0.05, 0.05)
 
         leg_info = []
 
