@@ -3,3 +3,22 @@
 -- '0 1 0': dog walking forwards
 -- '0 0 1': dog rotating
 
+- ok in unity it's +/- 75 deg angle limit.
+
+- ok I think for the short-term dont worry about the 3 seg 4 seg limits things just export/import them into mujoco, in the mid-term we can worry about that. perhaps wont even be necessary.
+
+- this is acc fun again now lol
+- just modify the methods so that it spawn in our creature properly. yea
+
+- ah ok so the position of the Leg is relative to center of the torso. thats it. not normalized to the torso dims or anything, its just world units.
+
+- why are the joint_ranges and similar stuff duplicated across both files..
+
+- the numbers we get from unity are:
+-- the segment's unique id (one byte, can just handle as an int)
+-- the segment's type id (one byte, can just handle as an int) // maybe easiest just to not use this
+-- the segment's size (x,y,z dims) (remember that this is the Unity coordinate system, which is different from the mujoco coordinate system.)
+-- the segment's parent's unique id (one byte, can just handle as an int)
+-- the segment's parent's type id (one byte, can just handle as an int) // maybe easiest just to not use this
+-- the segment's joint type (none, fixed, hinge)
+-- the segment's joint anchorpos, if none (none), elif fixed or hinge (x,y,z pos relative to parents origin)

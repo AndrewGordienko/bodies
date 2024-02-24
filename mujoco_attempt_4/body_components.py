@@ -2,17 +2,25 @@ import numpy as np
 import xml.etree.ElementTree as ET
 import random
 
+# joint_ranges = {
+#     'hip': '-90 90',
+#     'knee': '-90 90',
+#     'ankle': '-50 50'  # New ankle joint range
+# }
 joint_ranges = {
-    'hip': '-90 90',
-    'knee': '-90 90',
-    'ankle': '-50 50'  # New ankle joint range
+    'hip': '-75 75',
+    'knee': '-75 75',
+    'ankle': '-75 75'  # New ankle joint range
 }
+
+# NOTE: I believe this we can tune as a hyperparameter
 motor_gears = {
     'hip': 200,
     'knee': 200,
     'ankle': 200  # New gear for ankle motor
 }
 
+# NOTE: I believe this we can tune as a hyperparameter
 # Lower damping values for more fluid movement
 joint_damping = {
     'hip': '2.0',
@@ -55,7 +63,7 @@ class Torso:
         return torso
 
 class Leg:
-    def __init__(self, name, torso_size, upper_size, lower_size, foot_size):
+    def __init__(self, name, torso_size, upper_size, lower_size, foot_size, position):
         self.name = name
         self.torso_size = torso_size
         # Customizable sizes for leg parts
@@ -63,6 +71,7 @@ class Leg:
         self.lower_size = lower_size
         self.foot_size = foot_size
         self.subparts = 0
+        self.position = position
 
     def to_xml(self):
         # Random edge selection for leg placement
@@ -72,7 +81,8 @@ class Leg:
             (self.torso_size[0]/2, 0, 0),  # Front side
             (-self.torso_size[0]/2, 0, 0)  # Back side
         ]
-        position = random.choice(edge_positions)
+        # position = random.choice(edge_positions)
+        position = self.position
 
         leg = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, position))}) 
 

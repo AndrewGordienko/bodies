@@ -3,17 +3,25 @@ import xml.etree.ElementTree as ET
 import random
 from body_components import Torso, Leg
 
+# joint_ranges = {
+#     'hip': '-90 90',
+#     'knee': '-90 90',
+#     'ankle': '-50 50'  # New ankle joint range
+# }
 joint_ranges = {
-    'hip': '-90 90',
-    'knee': '-90 90',
-    'ankle': '-50 50'  # New ankle joint range
+    'hip': '-75 75',
+    'knee': '-75 75',
+    'ankle': '-75 75'  # New ankle joint range
 }
+
+# NOTE: I believe this we can tune as a hyperparameter
 motor_gears = {
     'hip': 200,
     'knee': 200,
     'ankle': 200  # New gear for ankle motor
 }
 
+# NOTE: I believe this we can tune as a hyperparameter
 # Lower damping values for more fluid movement
 joint_damping = {
     'hip': '2.0',
@@ -127,7 +135,8 @@ def create_ant_model(num_creatures=9):
         # Create a flag with the same color as the torso
         worldbody.append(create_flag_xml(creature_id, layer, color))
 
-        num_legs = random.randint(1, 4)
+        # num_legs = random.randint(1, 4)
+        num_legs = 1
         # upper_size = (0.04, 0.04, 0.04*4)
         # lower_size = (0.04, 0.04, 0.04*4)
         # foot_size = (0.04, 0.04, 0.04*4)
@@ -137,6 +146,7 @@ def create_ant_model(num_creatures=9):
         # upper_size = (0.04*4, 0.04, 0.04)
         # lower_size = (0.04*4, 0.04, 0.04)
         # foot_size = (0.04*4, 0.04, 0.04)
+        position = (0, -torso_obj.size[1]/2, 0)
 
         leg_info = []
 
@@ -144,7 +154,7 @@ def create_ant_model(num_creatures=9):
             leg_name = f"leg_{creature_id}_{i+1}"
 
             # Create Leg object with random edge placement
-            leg_obj = Leg(leg_name, torso_obj.size, upper_size, lower_size, foot_size)
+            leg_obj = Leg(leg_name, torso_obj.size, upper_size, lower_size, foot_size, position)
             leg_xml, foot_joint_name = leg_obj.to_xml()
             torso_xml.append(leg_xml)
 
