@@ -26,19 +26,7 @@ class Torso:
         self.position = position
         self.size = size if size else (random.uniform(0.2, 0.5), random.uniform(0.1, 0.2), random.uniform(0.05, 0.1))
 
-    # def to_xml(self, layer, color):
-    #     torso = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, self.position))})
-    #     ET.SubElement(torso, 'geom', attrib={
-    #         'name': f'torso_geom_{self.name}', 
-    #         'type': 'box', 
-    #         'size': ' '.join(map(str, self.size)), 
-    #         'pos': '0 0 0', 
-    #         'contype': '1', 
-    #         'conaffinity': str(layer),
-    #         'material': color  # Assign unique color
-    #     })
-        
-    def to_xml(self, layer, color_name):  # `color_name` should be the name of the material
+    def to_xml(self, layer, color):
         torso = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, self.position))})
         ET.SubElement(torso, 'geom', attrib={
             'name': f'torso_geom_{self.name}', 
@@ -47,9 +35,9 @@ class Torso:
             'pos': '0 0 0', 
             'contype': '1', 
             'conaffinity': str(layer),
-            'material': color_name  # Use the material name here, not RGBA
-         })
-            
+            'material': color  # Assign unique color
+        })
+        
         ET.SubElement(torso, 'joint', attrib={
             'name': f'{self.name}_root', 
             'type': 'free', 
@@ -99,8 +87,6 @@ class Leg:
                             })
 
         ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'ball', 'damping': joint_damping['hip']})
-        # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': "0 0 1",'damping': joint_damping['hip']}, pos="0 0 0")
-        # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': "0 0 1",'damping': joint_damping['hip']}, pos="0 0 0")
 
         # Lower part
         # Position the lower part based on the total length of the upper part to continue from its end
