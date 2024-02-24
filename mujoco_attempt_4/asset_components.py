@@ -51,18 +51,30 @@ def create_assets_xml():
     })
 
     # Define materials for the colors used for creatures and flags
-    color_materials = {
-        'red': '1 0 0 1', 
-        'green': '0 1 0 1', 
-        'blue': '0 0 1 1',
-        'yellow': '1 1 0 1', 
-        'purple': '0.5 0 0.5 1', 
-        'orange': '1 0.5 0 1',
-        'pink': '1 0.7 0.7 1', 
-        'grey': '0.5 0.5 0.5 1', 
-        'brown': '0.6 0.3 0 1'
-    }
+    # color_materials = {
+    #     'red': '1 0 0 1', 
+    #     'green': '0 1 0 1', 
+    #     'blue': '0 0 1 1',
+    #     'yellow': '1 1 0 1', 
+    #     'purple': '0.5 0 0.5 1', 
+    #     'orange': '1 0.5 0 1',
+    #     'pink': '1 0.7 0.7 1', 
+    #     'grey': '0.5 0.5 0.5 1', 
+    #     'brown': '0.6 0.3 0 1'
+    # }
+    alpha = '0.2'
 
+    color_materials = {
+        'red': f'1 0 0 {alpha}', 
+        'green': f'0 1 0 {alpha}', 
+        'blue': f'0 0 1 {alpha}',
+        'yellow': f'1 1 0 {alpha}', 
+        'purple': f'0.5 0 0.5 {alpha}', 
+        'orange': f'1 0.5 0 {alpha}',
+        'pink': f'1 0.7 0.7 {alpha}', 
+        'grey': f'0.5 0.5 0.5 {alpha}', 
+        'brown': f'0.6 0.3 0 {alpha}'
+    }
     for name, rgba in color_materials.items():
         ET.SubElement(assets, 'material', attrib={'name': name, 'rgba': rgba})
 
