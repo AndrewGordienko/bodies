@@ -86,8 +86,8 @@ class Leg:
                             'pos': f'0 0 {upper_pos_z}'
                             })
 
-        ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'ball', 'damping': joint_damping['hip']})
-        # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': '0 1 0', 'damping': joint_damping['hip']})
+        # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'ball', 'damping': joint_damping['hip']})
+        ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': '0 1 0', 'damping': joint_damping['hip']})
 
         # Lower part
         # Position the lower part based on the total length of the upper part to continue from its end
@@ -106,7 +106,7 @@ class Leg:
 
         # Ankle joint
         # ET.SubElement(foot_part, 'joint', attrib={'name': self.name + '_ankle_joint', 'type': 'ball', 'damping': joint_damping['ankle']})
-        ET.SubElement(foot_part, 'joint', attrib={'name': self.name + '_ankle_joint', 'type': 'hinge', 'axis': '0 0 1', 'damping': joint_damping['ankle']})
+        ET.SubElement(foot_part, 'joint', attrib={'name': self.name + '_ankle_joint', 'type': 'hinge', 'axis': '0 1 0', 'damping': joint_damping['ankle']})
 
         self.subparts = 1  # upper part
         self.subparts += 1 if self.lower_size[2] > 0 else 0

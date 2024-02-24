@@ -6,6 +6,7 @@ from dm_control import viewer
 # from soccer_body_components import create_soccer_environment
 import numpy as np
 from asset_components import create_ant_model
+import math
 
 class CustomSoccerEnv(base.Task):
     def __init__(self, xml_string):
@@ -33,11 +34,20 @@ def load_and_render_soccer_env(xml_string):
     task = CustomSoccerEnv(xml_string)
     env = control.Environment(physics, task, time_limit=20)
     
+    # Initialize a step counter
+    step_counter = 0
+
     # Define a dummy policy that does nothing (for demonstration purposes)
     def policy(time_step):
+        nonlocal step_counter
         action_spec = env.action_spec()
         # return np.zeros(action_spec.shape)
-        return 0.1 * np.ones(action_spec.shape) 
+        # return 0.1 * np.ones(action_spec.shape) 
+        action = -1 * math.sin(0.01 * step_counter) * np.ones(action_spec.shape) 
+        # Increment the step counter
+        step_counter += 1
+        return action
+    
 
     
     # Use the dm_control viewer to render the environment

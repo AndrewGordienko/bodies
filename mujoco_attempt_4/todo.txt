@@ -1,0 +1,8 @@
+- get test configuration 1 working (check notebook for diagram.)
+-- set the first joint to hinge too
+-- restrict to only 1 leg per creature
+-- custom set the position of that 1 leg 
+-- move the leg to correct position
+-- choose the correct hinge joint axis
+-- move the hinge joint anchor to the correct position (first gotta figure out how to even do this)
+- make sure that changing joints from ball to hinge doesnt break the size of the action vector.
