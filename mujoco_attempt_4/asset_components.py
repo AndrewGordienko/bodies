@@ -71,7 +71,25 @@ def create_assets_xml():
 def create_floor_xml(size=(10, 10, 0.1)):
     return ET.Element('geom', attrib={'name': 'floor', 'type': 'plane', 'size': ' '.join(map(str, size)), 'pos': '0 0 0', 'material': 'MatCheckered'})
 
-def create_flag_xml(flag_id, layer, color, floor_size=(10, 10, 0.1)):
+# def create_flag_xml(flag_id, layer, color, floor_size=(10, 10, 0.1)):
+#     flag_x = random.uniform(-floor_size[0]/2, floor_size[0]/2)
+#     flag_y = random.uniform(-floor_size[1]/2, floor_size[1]/2)
+#     flag_z = 0  # On the floor
+#     flag_position = (flag_x, flag_y, flag_z)
+
+#     flag_size = (0.05, 0.05, 0.5)  # Cube size
+#     return ET.Element('geom', attrib={
+#         'name': f'flag_{flag_id}', 
+#         'type': 'box', 
+#         'size': ' '.join(map(str, flag_size)), 
+#         'pos': ' '.join(map(str, flag_position)), 
+#         'material': color,  # Assign the color material
+#         'contype': '1', 
+#         'conaffinity': str(layer)
+#     })
+
+
+def create_flag_xml(flag_id, layer, color_name, floor_size=(10, 10, 0.1)):
     flag_x = random.uniform(-floor_size[0]/2, floor_size[0]/2)
     flag_y = random.uniform(-floor_size[1]/2, floor_size[1]/2)
     flag_z = 0  # On the floor
@@ -83,10 +101,11 @@ def create_flag_xml(flag_id, layer, color, floor_size=(10, 10, 0.1)):
         'type': 'box', 
         'size': ' '.join(map(str, flag_size)), 
         'pos': ' '.join(map(str, flag_position)), 
-        'material': color,  # Assign the color material
+        'material': color_name,  # Use the material name here
         'contype': '1', 
         'conaffinity': str(layer)
     })
+
 
 def create_ant_model(num_creatures=9):
     mujoco_model = ET.Element('mujoco')
@@ -98,22 +117,38 @@ def create_ant_model(num_creatures=9):
 
     # Define a list of colors for creatures and flags
     colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink', 'grey', 'brown']  # Add more colors if needed
+    color_rgba = {
+        'red': '1 0 0 0.5',  # Red
+        'green': '0 1 0 0.5',  # Green
+        'blue': '0 0 1 0.5',  # Blue
+        'yellow': '1 1 0 0.5',  # Yellow
+        'purple': '0.5 0 0.5 0.5',  # Purple
+        'orange': '1 0.65 0 0.5',  # Orange
+        'pink': '1 0.75 0.8 0.5',  # Pink
+        'grey': '0.5 0.5 0.5 0.5',  # Grey
+        'brown': '0.65 0.16 0.16 0.5',  # Brown
+    }
 
     creature_leg_info = {}  # Dictionary to store leg and subpart info
 
     for creature_id in range(num_creatures):
         layer = creature_id + 1
-        color = colors[creature_id % len(colors)]
+        # color = colors[creature_id % len(colors)]
+        color_name = colors[creature_id % len(colors)]
+        rgba_color = color_rgba[color_name]  # Get the RGBA value for the color name
+
 
         # Adjust the initial position to spread out the creatures
         initial_position = (creature_id - num_creatures / 2, 0, 0.75)
         
         torso_obj = Torso(name=f'torso_{creature_id}', position=initial_position)
-        torso_xml = torso_obj.to_xml(layer, color)
+        # torso_xml = torso_obj.to_xml(layer, color)
+        torso_xml = torso_obj.to_xml(layer, rgba_color)
         worldbody.append(torso_xml)
 
         # Create a flag with the same color as the torso
-        worldbody.append(create_flag_xml(creature_id, layer, color))
+        # worldbody.append(create_flag_xml(creature_id, layer, color))
+        worldbody.append(create_flag_xml(creature_id, layer, color_name))
 
         num_legs = random.randint(1, 4)
         # upper_size = (0.04, 0.04, 0.04*4)
