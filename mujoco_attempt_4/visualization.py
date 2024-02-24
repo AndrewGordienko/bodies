@@ -36,7 +36,9 @@ def load_and_render_soccer_env(xml_string):
     # Define a dummy policy that does nothing (for demonstration purposes)
     def policy(time_step):
         action_spec = env.action_spec()
-        return np.zeros(action_spec.shape)
+        # return np.zeros(action_spec.shape)
+        return 0.1 * np.ones(action_spec.shape) 
+
     
     # Use the dm_control viewer to render the environment
     viewer.launch(env, policy=policy)
