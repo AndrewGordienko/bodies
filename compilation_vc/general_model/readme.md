@@ -1,0 +1,1 @@
+the point of this is to train a general ppo model that can take any creature body and walk with it, so given a unity karl sims body it can walk. bodies xml is written into python to generate xml, and then the environment is in cpp for speed with the ppo in python so environment is accessed from python
