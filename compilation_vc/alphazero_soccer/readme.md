@@ -1,0 +1,1 @@
+this folder has code to train alphazero with pygame to play soccer in terms of circles in pygame. uses transformers for the networks to do heatmaps. the heatmaps need to first be trained, and then alphazero finetunes the understanding
