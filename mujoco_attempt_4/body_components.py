@@ -32,7 +32,8 @@ class Torso:
     def __init__(self, name="torso", position=(0, 0, 0.75), size=None):
         self.name = name
         self.position = position
-        self.size = size if size else (random.uniform(0.2, 0.5), random.uniform(0.1, 0.2), random.uniform(0.05, 0.1))
+        # self.size = size if size else (random.uniform(0.2, 0.5), random.uniform(0.1, 0.2), random.uniform(0.05, 0.1))
+        self.size = size if size else (random.uniform(0.2, 0.5), random.uniform(0.1, 5*0.2), random.uniform(0.05, 0.1))
 
     def to_xml(self, layer, color):
         torso = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, self.position))})
