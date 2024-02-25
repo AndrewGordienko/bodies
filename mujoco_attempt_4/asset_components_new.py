@@ -97,7 +97,7 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
     worldbody = ET.SubElement(mujoco_model, 'worldbody')
     worldbody.append(create_floor_xml(size=FLOOR_SIZE))
 
-    # actuator = ET.SubElement(mujoco_model, 'actuator')
+    actuator = ET.SubElement(mujoco_model, 'actuator')
 
     # creature_leg_info = {}  # Dictionary to store leg and subpart info
     
@@ -113,7 +113,7 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
         # Adjust the initial position to spread out the creatures
         initial_position = (creature_id - num_creatures / CREATURE_SPACING, 0, CREATURE_SPAWN_HEIGHT)
 
-        creature_xml = create_creature_xml(creature_id, layer, color, initial_position, blueprint)
+        creature_xml = create_creature_xml(creature_id, layer, color, initial_position, blueprint, actuator)
         worldbody.append(creature_xml)
 
     # Add sensors
@@ -127,7 +127,7 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
     return xml_string, {}
     # return xml_string
 
-def create_creature_xml(creature_id, layer, color, initial_position, blueprint):
+def create_creature_xml(creature_id, layer, color, initial_position, blueprint, actuator):
     creature = ET.Element('body', attrib={'name': f'creature_{creature_id}', 'pos': tuple_to_str(initial_position)})
 
     for segment_id, segment_info in blueprint.items():
@@ -146,14 +146,17 @@ def create_creature_xml(creature_id, layer, color, initial_position, blueprint):
         )
         creature.append(segment.to_xml(layer))
 
-        # Add motors for each joint
-        ET.SubElement(actuator, 'motor', attrib={
-            'name': f'{leg_name}_hip_motor',
-            'joint': f'{leg_name}_hip_joint',
-            'ctrllimited': 'true',
-            'ctrlrange': '-1 1',
-            'gear': str(motor_gears['hip'])
-        })
+        if segment.joint_type == 'hinge':
+            # Add motors for each joint
+            ET.SubElement(actuator, 'motor', attrib={
+                # 'name': f'{leg_name}_hip_motor',
+                # 'joint': f'{leg_name}_hip_joint',
+                'name': f'{segment.name}_motor',
+                'joint': f'{segment.name}_joint',
+                'ctrllimited': 'true',
+                'ctrlrange': '-1 1',
+                'gear': str(MOTOR_GEAR),
+            })
 
     return creature
 
