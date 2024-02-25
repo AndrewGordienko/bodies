@@ -14,19 +14,30 @@ joint_ranges = {
     'ankle': '-75 75'  # New ankle joint range
 }
 
+# # NOTE: I believe this we can tune as a hyperparameter
+# motor_gears = {
+#     'hip': 200,
+#     'knee': 200,
+#     'ankle': 200  # New gear for ankle motor
+# }
 # NOTE: I believe this we can tune as a hyperparameter
 motor_gears = {
-    'hip': 200,
-    'knee': 200,
-    'ankle': 200  # New gear for ankle motor
+    'hip': 20000,
+    'knee': 20000,
+    'ankle': 20000  # New gear for ankle motor
 }
 
 # NOTE: I believe this we can tune as a hyperparameter
 # Lower damping values for more fluid movement
+# joint_damping = {
+#     'hip': '2.0',
+#     'knee': '4.0',
+#     'ankle': '6.0'  # New damping value for ankle joint
+# }
 joint_damping = {
-    'hip': '2.0',
+    'hip': '4.0',
     'knee': '4.0',
-    'ankle': '6.0'  # New damping value for ankle joint
+    'ankle': '4.0'  # New damping value for ankle joint
 }
 
 def create_assets_xml():
@@ -146,7 +157,7 @@ def create_ant_model(num_creatures=9):
         # upper_size = (0.04, 0.04, 0.04)
         upper_size = (0.60, 0.39, 0.42) # switched 2nd and 3rd arguments for mujoco
         lower_size = (0.60, 0.39, 0.42) # switched 2nd and 3rd arguments for mujoco
-        foot_size = (0.60, 0.39, 0.42) # switched 2nd and 3rd arguments for mujoco
+        foot_size = (0.60/10, 0.39/10, 0.42/10) # switched 2nd and 3rd arguments for mujoco
         # lower_size = (0.04, 0.04, 0.04)
         # foot_size = (0.04, 0.04, 0.04)
         # upper_size = (0.04*4, 0.04, 0.04)

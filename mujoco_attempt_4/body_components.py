@@ -13,19 +13,25 @@ joint_ranges = {
     'ankle': '-75 75'  # New ankle joint range
 }
 
+# # NOTE: I believe this we can tune as a hyperparameter
+# motor_gears = {
+#     'hip': 200,
+#     'knee': 200,
+#     'ankle': 200  # New gear for ankle motor
+# }
 # NOTE: I believe this we can tune as a hyperparameter
 motor_gears = {
-    'hip': 200,
-    'knee': 200,
-    'ankle': 200  # New gear for ankle motor
+    'hip': 2000,
+    'knee': 2000,
+    'ankle': 2000  # New gear for ankle motor
 }
 
 # NOTE: I believe this we can tune as a hyperparameter
 # Lower damping values for more fluid movement
 joint_damping = {
-    'hip': '2.0',
+    'hip': '4.0',
     'knee': '4.0',
-    'ankle': '6.0'  # New damping value for ankle joint
+    'ankle': '4.0'  # New damping value for ankle joint
 }
 
 class Torso:
@@ -87,7 +93,7 @@ class Leg:
         position = self.position
 
         # leg = ET.Element('body', attrib={'name': self.name, 'quat': '', 'pos': ' '.join(map(str, position))}) 
-        leg = ET.Element('body', attrib={'name': self.name, 'euler': '45 0 0', 'pos': ' '.join(map(str, position))}) 
+        leg = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, position))}) 
         # leg = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, position))}) 
 
         # Upper part
