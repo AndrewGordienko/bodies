@@ -11,7 +11,7 @@ import math
 blueprint = {
     '0': {
         # TODO: I think make this (0 0 0), handle shifts elsewhere outside.
-        'position': (0.00, 0.00, -5.34 + 10), #yz swapped, then +10 vertically from the default unity values.
+        'position': (0.00, 0.00, -5.34), #yz swapped, 
         'rotation': (0.0, 0.0, 0.0), #yz swapped
         'size': (0.78, 0.44, 1.32), #yz swapped
         'parent_unique_id': None,
@@ -21,8 +21,8 @@ blueprint = {
         'color': (27.00, 255.00, 233.00)
     },
     '1': {
-        # 'position': (-0.37, 0.07, -4.02 + 10), #yz swapped, +10 vertically
-        'position': tuple(np.subtract( (0.00, 0.00, -5.34 + 10) , (-0.37, 0.07, -4.02 + 10))), #yz swapped, +10 vertically, then subtracted from the position of the parent segment
+        # TODO: think about direction of the offset (probably will depend on something). but for now for this test case,
+        'position': tuple(np.subtract((0.00, 0.00, -5.34), (-0.37, 0.07, -4.02)))[:2] + (-4.02 + 0.42 + 0.00000001,), #yz swapped, then subtracted from the position of the parent segment, then z value replaced accordingly. TODO: verify that this works.. intuitively it's a bit sus
         'rotation': (0.0, 0.0, 0.0), #yz swapped
         'size': (0.60, 0.39, 0.42), #yz swapped
         'parent_unique_id': 1,
