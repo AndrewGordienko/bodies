@@ -137,6 +137,7 @@ def create_ant_model(num_creatures=9):
 
         # num_legs = random.randint(1, 4)
         num_legs = 1
+        SCALING_FACTOR = 0.1
         # upper_size = (0.04, 0.04, 0.04*4)
         # lower_size = (0.04, 0.04, 0.04*4)
         # foot_size = (0.04, 0.04, 0.04*4)
@@ -146,7 +147,7 @@ def create_ant_model(num_creatures=9):
         # upper_size = (0.04*4, 0.04, 0.04)
         # lower_size = (0.04*4, 0.04, 0.04)
         # foot_size = (0.04*4, 0.04, 0.04)
-        position = (0, -torso_obj.size[1]-0.04, -torso_obj.size[2])
+        position = (-torso_obj.size[0]+upper_size[0], -torso_obj.size[1]-upper_size[1], -torso_obj.size[2])
 
         leg_info = []
 
