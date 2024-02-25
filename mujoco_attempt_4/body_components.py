@@ -71,7 +71,7 @@ class Torso:
         return torso
 
 class Leg:
-    def __init__(self, name, torso_size, upper_size, lower_size, foot_size, position):
+    def __init__(self, name, torso_size, upper_size, lower_size, foot_size, position, leg_joint_anchor_position, leg_joint_axis):
     # def __init__(self, name, torso_size, upper_size, lower_size, foot_size, position, upper_position):
         self.name = name
         self.torso_size = torso_size
@@ -81,6 +81,8 @@ class Leg:
         self.foot_size = foot_size
         self.subparts = 0
         self.position = position
+        self.leg_joint_anchor_position = leg_joint_anchor_position
+        self.leg_joint_axis = leg_joint_axis
         # self.upper_position = upper_position
 
     def to_xml(self):
@@ -115,7 +117,7 @@ class Leg:
         #                     })
 
         # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'ball', 'damping': joint_damping['hip']})
-        ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': '1 0 0', 'pos': '0 0.04 0', 'damping': joint_damping['hip']})
+        ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': ' '.join(map(str, self.leg_joint_axis)), 'pos': ' '.join(map(str, self.leg_joint_anchor_position)), 'damping': joint_damping['hip']})
         # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': '1 0 0', 'pos': '-0.48 1.00 0.16', 'damping': joint_damping['hip']})
 
         # Lower part

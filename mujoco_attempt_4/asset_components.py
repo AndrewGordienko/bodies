@@ -165,6 +165,8 @@ def create_ant_model(num_creatures=9):
         # foot_size = (0.04*4, 0.04, 0.04)
         # position = (-torso_obj.size[0]+upper_size[0], -torso_obj.size[1]-upper_size[1], -torso_obj.size[2])
         leg_position = (-0.37, 0.07, -4.02 + 10) # switched 2nd and 3rd arguments for mujoco
+        leg_joint_anchor_position = (-0.48, 0.16, 1.00) # switched 2nd and 3rd arguments for mujoco
+        leg_joint_axis = (0,0,1) # switched 2nd and 3rd arguments for mujoco
         position = tuple(np.subtract(torso_position, leg_position)) # switched 2nd and 3rd arguments for mujoco
 
         # upper_position = (0,0,0)
@@ -175,7 +177,7 @@ def create_ant_model(num_creatures=9):
             leg_name = f"leg_{creature_id}_{i+1}"
 
             # Create Leg object with random edge placement
-            leg_obj = Leg(leg_name, torso_obj.size, upper_size, lower_size, foot_size, position)
+            leg_obj = Leg(leg_name, torso_obj.size, upper_size, lower_size, foot_size, position, leg_joint_anchor_position=leg_joint_anchor_position, leg_joint_axis=leg_joint_axis)
             # leg_obj = Leg(leg_name, torso_obj.size, upper_size, lower_size, foot_size, position, upper_position)
             leg_xml, foot_joint_name = leg_obj.to_xml()
             torso_xml.append(leg_xml)
