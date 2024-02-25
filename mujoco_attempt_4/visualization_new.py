@@ -1388,7 +1388,6 @@ json_input_full_allseg = [
   }
 ]
 
-
 def convert_json_to_blueprint(json_input):
     blueprint = {}
     for item in json_input:
@@ -1455,7 +1454,7 @@ def convert_json_to_blueprint(json_input):
 
     return blueprint
 
-blueprint = convert_json_to_blueprint(json_input_full_allseg)
+blueprint = convert_json_to_blueprint(json_input_full_2seg)
 
 manual_blueprint = {
     '0': {

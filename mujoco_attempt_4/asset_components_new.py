@@ -52,7 +52,8 @@ def create_assets_xml():
         'specular': '1'
     })
 
-    alpha = '0.2'
+    # alpha = '0.2'
+    alpha = '1.0'
 
     color_materials = {
         'red': f'1 0 0 {alpha}', 
