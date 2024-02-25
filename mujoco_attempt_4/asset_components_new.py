@@ -113,7 +113,8 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
         # Adjust the initial position to spread out the creatures
         initial_position = (creature_id - num_creatures / CREATURE_SPACING, 0, CREATURE_SPAWN_HEIGHT)
 
-        creature = create_creature_xml(creature_id, layer, color, initial_position, blueprint)
+        creature_xml = create_creature_xml(creature_id, layer, color, initial_position, blueprint)
+        worldbody.append(creature_xml)
 
     # Add sensors
     sensors = ET.SubElement(mujoco_model, 'sensor')
@@ -132,7 +133,7 @@ def create_creature_xml(creature_id, layer, color, initial_position, blueprint):
     for segment_id, segment_info in blueprint.items():
         
         segment = Segment(
-            unique_id=segment_id,
+            unique_id=int(segment_id),
             position=segment_info['position'],
             rotation=segment_info['rotation'],
             size=segment_info['size'],

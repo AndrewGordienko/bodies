@@ -83,6 +83,7 @@ def load_and_render_soccer_env(xml_string):
 # xml_soccer = create_soccer_environment()
 # xml_soccer =  create_ant_model(num_creatures=9)
 xml_soccer, _ =  create_flags_and_creatures(num_creatures=1, blueprint=blueprint)
+print(xml_soccer)
 
 # Load and render the environment
 load_and_render_soccer_env(xml_soccer)

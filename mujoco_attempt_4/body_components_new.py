@@ -27,10 +27,10 @@ class Segment:
         self.creature_id = creature_id
         self.name = f'creature_{self.creature_id}_segment_{self.unique_id}'
 
-    
     def to_xml(self, layer):
         segment = ET.Element('body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
         
+
         ET.SubElement(segment, 'geom', attrib={
             'name': f'{self.name}_geom', 
             'type': 'box', 
@@ -41,19 +41,32 @@ class Segment:
             'material': self.color  
         })
 
-        ET.SubElement(segment, 'joint', attrib={
-            'name': f'{self.name}_joint', 
-            'type': self.joint_type, 
-            'pos': tuple_to_str(self.joint_anchorpos), 
-            'axis': tuple_to_str(self.joint_axis), 
-            'range': JOINT_RANGE, 
-            'damping': JOINT_DAMPING, 
-            # 'stiffness': '0', 
-            # 'armature': '0', 
-            # 'solimplimit': '0.99', 
-            # 'solreflimit': '0.99', 
-            # 'limited': 'true'
-        })
+        if self.parent_unique_id is not None and self.joint_type == 'hinge':
+            ET.SubElement(segment, 'joint', attrib={
+                'name': f'{self.name}_joint', 
+                'type': 'hinge', 
+                'pos': tuple_to_str(self.joint_anchorpos), 
+                'axis': tuple_to_str(self.joint_axis), 
+                'range': JOINT_RANGE, 
+                'damping': JOINT_DAMPING, 
+                # 'stiffness': '0', 
+                # 'armature': '0', 
+                # 'solimplimit': '0.99', 
+                # 'solreflimit': '0.99', 
+                # 'limited': 'true'
+            })
+        elif self.parent_unique_id is not None and self.joint_type == 'fixed':
+            ET.SubElement(segment, 'joint', attrib={
+                'name': f'{self.name}_joint', 
+                'type': 'fixed', 
+                'pos': tuple_to_str(self.joint_anchorpos), 
+            })
+        # elif self.parent_unique_id is None:
+        #     ET.SubElement(segment, 'joint', attrib={
+        #         'name': f'{self.name}_joint', 
+        #         'type': 'free', 
+        #         'pos': '0 0 0', 
+        #     })
 
         # add site for sensors if this is the segment with unique_id 0
         if self.unique_id == 0:
