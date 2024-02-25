@@ -7,9 +7,10 @@ X- choose the correct hinge joint axis
 X- move the hinge joint anchor to the correct position (first gotta figure out how to even do this)
 X- make it the right dims as the first pair of segments in TWO_ARM_ROWER.
 X get test configuration 1.5 working (check notebook for diagram.)
-- step by step, with config 2, 3, ... , manually build up the TWO_ARM_ROWER.
-O- clean up code, stop using hardcoded dog system and use general creature system instead.
-- automate this process given the necessary description exported from unity.
+~ step by step, with config 2, 3, ... , manually build up the TWO_ARM_ROWER.
+X- clean up code, stop using hardcoded dog system and use general creature system instead.
+O automate this process given the necessary description exported from unity.
+-- create a function that takes in a filepath to the .json file, and returns a processed blueprint dict.
 - make sure that changing joints from ball to hinge doesnt break the size of the action vector.
 
 - oh yeah check origin in unity or somthing

@@ -25,6 +25,8 @@
 
 
 - okk so based on diffchecker, there seem to be 2 main differences.
--- 1. the sensor stuff doesnt seem to be added properly at the end. 
+X- 1. the sensor stuff doesnt seem to be added properly at the end. 
 -- 2. the positions are different
----
+
+- OKK json export from unity seems to work now.
+- now,

@@ -7,8 +7,90 @@ from dm_control import viewer
 import numpy as np
 from asset_components_new import create_flags_and_creatures
 import math
+import json
 
-blueprint = {
+# Given JSON input
+json_input = [
+  {
+    "UniqueId": 0,
+    "TypeId": 1,
+    "Position": {"x": 0.0, "y": -5.33999634, "z": 0.0},
+    "Rotation": {"x": 0.0, "y": 0.0, "z": 0.0},
+    "Size": {"x": 0.7817855, "y": 1.3171674, "z": 0.436341643},
+    "ParentUniqueId": None,
+    "JointType": None,
+    "JointAnchorPos": None,
+    "JointAxis": None,
+    "Color": {"x": 27.0, "y": 255.0, "z": 233.0}
+  },
+  {
+    "UniqueId": 1,
+    "TypeId": 3,
+    "Position": {"x": -0.373039246, "y": -4.022829, "z": 0.06939888},
+    "Rotation": {"x": 0.0008985509, "y": 0.00109280727, "z": 0.004466458},
+    "Size": {"x": 0.595344, "y": 0.419512331, "z": 0.388579845},
+    "ParentUniqueId": 0,
+    "JointType": "hinge",
+    "JointAnchorPos": {"x": -0.477163136, "y": 0.99999994, "z": 0.159047112},
+    "JointAxis": {"x": 0.0, "y": 1.0, "z": 0.0},
+    "Color": {"x": 187.0, "y": 84.0, "z": 213.0}
+  }
+]
+
+def convert_json_to_blueprint(json_input):
+    blueprint = {}
+    for item in json_input:
+        unique_id = str(item["UniqueId"])
+        position = (item["Position"]["x"], item["Position"]["z"], item["Position"]["y"])
+        rotation = (item["Rotation"]["x"], item["Rotation"]["z"], item["Rotation"]["y"])
+        size = (item["Size"]["x"], item["Size"]["z"], item["Size"]["y"])
+        color = (item["Color"]["x"], item["Color"]["y"], item["Color"]["z"])
+
+        # Handle parent and subtraction for position if needed
+        if item["ParentUniqueId"] is not None and str(item["ParentUniqueId"]) in blueprint:
+            parent_position = blueprint[str(item["ParentUniqueId"])]["position"]
+            parent_size = blueprint[str(item["ParentUniqueId"])]["size"]
+            # Subtract parent position from current position and adjust Z value
+            adjusted_position = tuple(np.subtract(position[:2], parent_position[:2])) + (position[2] + parent_size[2] + 0.00000001,)
+        else:
+            adjusted_position = position
+
+        if int(unique_id) != 1:
+            blueprint[unique_id] = {
+                'position': adjusted_position,
+                'rotation': rotation,
+                'size': size,
+                'parent_unique_id': item["ParentUniqueId"],
+                'joint_type': item.get("JointType"),
+                'joint_anchorpos': None if not item.get("JointAnchorPos") else (
+                    item["JointAnchorPos"]["x"], item["JointAnchorPos"]["z"], item["JointAnchorPos"]["y"]
+                ),
+                'joint_axis': None if not item.get("JointAxis") else (
+                    item["JointAxis"]["x"], item["JointAxis"]["z"], item["JointAxis"]["y"]
+                ),
+                'color': color
+            }
+        else:
+            blueprint[1] = {
+                'position': tuple(np.subtract((0.00, 0.00, -5.34), (-0.37, 0.07, -4.02)))[:2] + (-4.02 + 0.42 + 0.00000001,),
+                'rotation': rotation,
+                'size': size,
+                'parent_unique_id': item["ParentUniqueId"],
+                'joint_type': item.get("JointType"),
+                'joint_anchorpos': None if not item.get("JointAnchorPos") else (
+                    item["JointAnchorPos"]["x"], item["JointAnchorPos"]["z"], item["JointAnchorPos"]["y"]
+                ),
+                'joint_axis': None if not item.get("JointAxis") else (
+                    item["JointAxis"]["x"], item["JointAxis"]["z"], item["JointAxis"]["y"]
+                ),
+                'color': color
+            }
+
+    return blueprint
+
+blueprint = convert_json_to_blueprint(json_input)
+
+manual_blueprint = {
     '0': {
         # TODO: I think make this (0 0 0), handle shifts elsewhere outside.
         'position': (0.00, 0.00, -5.34), #yz swapped, 
