@@ -4,7 +4,7 @@ X- figure out the max joint angle clamp that we use in unity, and match that her
 X- restrict to only 1 leg per creature
 X- custom set the position of that 1 leg 
 X- choose the correct hinge joint axis
-O- move the hinge joint anchor to the correct position (first gotta figure out how to even do this)
+X- move the hinge joint anchor to the correct position (first gotta figure out how to even do this)
 - step by step, with config 2, 3, ... , manually build up the TWO_ARM_ROWER.
 - automate this process given the necessary description exported from unity.
 - make sure that changing joints from ball to hinge doesnt break the size of the action vector.
