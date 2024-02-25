@@ -29,11 +29,12 @@ joint_damping = {
 }
 
 class Torso:
-    def __init__(self, name="torso", position=(0, 0, 0.75), size=None):
+    def __init__(self, name="torso", position=(0, 0, 0.75), size=None, rotation=(0, 0, 0)):
         self.name = name
         self.position = position
         # self.size = size if size else (random.uniform(0.2, 0.5), random.uniform(0.1, 0.2), random.uniform(0.05, 0.1))
         self.size = size if size else (random.uniform(0.2, 0.5), random.uniform(0.1, 10*0.2), random.uniform(0.05, 0.1))
+        self.rotation = rotation
 
     def to_xml(self, layer, color):
         torso = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, self.position))})
@@ -85,6 +86,7 @@ class Leg:
         # position = random.choice(edge_positions)
         position = self.position
 
+        # leg = ET.Element('body', attrib={'name': self.name, 'quat': '', 'pos': ' '.join(map(str, position))}) 
         leg = ET.Element('body', attrib={'name': self.name, 'euler': '45 0 0', 'pos': ' '.join(map(str, position))}) 
         # leg = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, position))}) 
 

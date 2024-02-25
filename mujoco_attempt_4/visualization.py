@@ -43,7 +43,7 @@ def load_and_render_soccer_env(xml_string):
         action_spec = env.action_spec()
         # return np.zeros(action_spec.shape)
         # return 0.1 * np.ones(action_spec.shape) 
-        action = -2 * math.sin(0.005 * step_counter) * np.ones(action_spec.shape) 
+        action = -2000 * math.sin(0.05 * step_counter) * np.ones(action_spec.shape) 
         # Increment the step counter
         step_counter += 1
         return action
