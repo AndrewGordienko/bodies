@@ -35,7 +35,7 @@ joint_damping = {
 }
 
 class Torso:
-    def __init__(self, name="torso", position=(0, 0, 0.75), size=None, rotation=(0, 0, 0)):
+    def __init__(self, name="torso", position=(0, 0, 0.75), rotation=(0, 0, 0), size=None,):
         self.name = name
         self.position = position
         # self.size = size if size else (random.uniform(0.2, 0.5), random.uniform(0.1, 0.2), random.uniform(0.05, 0.1))
@@ -72,6 +72,7 @@ class Torso:
 
 class Leg:
     def __init__(self, name, torso_size, upper_size, lower_size, foot_size, position):
+    # def __init__(self, name, torso_size, upper_size, lower_size, foot_size, position, upper_position):
         self.name = name
         self.torso_size = torso_size
         # Customizable sizes for leg parts
@@ -80,6 +81,7 @@ class Leg:
         self.foot_size = foot_size
         self.subparts = 0
         self.position = position
+        # self.upper_position = upper_position
 
     def to_xml(self):
         # Random edge selection for leg placement
@@ -105,6 +107,12 @@ class Leg:
                             'size': ' '.join(map(str, self.upper_size)),
                             'pos': f'0 0 {upper_pos_z}'
                             })
+        # ET.SubElement(leg, 'geom',
+        #             attrib={'name': self.name + '_upper_geom',
+        #                     'type': 'box', 
+        #                     'size': ' '.join(map(str, self.upper_size)),
+        #                     'pos': ' '.join(map(str, self.upper_position))
+        #                     })
 
         # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'ball', 'damping': joint_damping['hip']})
         ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': '1 0 0', 'pos': '0 0.04 0', 'damping': joint_damping['hip']})
