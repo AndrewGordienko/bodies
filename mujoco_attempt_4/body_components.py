@@ -85,7 +85,8 @@ class Leg:
         # position = random.choice(edge_positions)
         position = self.position
 
-        leg = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, position))}) 
+        leg = ET.Element('body', attrib={'name': self.name, 'euler': '45 0 0', 'pos': ' '.join(map(str, position))}) 
+        # leg = ET.Element('body', attrib={'name': self.name, 'pos': ' '.join(map(str, position))}) 
 
         # Upper part
         # Adjust the position based on half of its height to place its base at the parent body's attachment point
@@ -99,6 +100,7 @@ class Leg:
 
         # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'ball', 'damping': joint_damping['hip']})
         ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': '1 0 0', 'pos': '0 0.04 0', 'damping': joint_damping['hip']})
+        # ET.SubElement(leg, 'joint', attrib={'name': self.name + '_hip_joint', 'type': 'hinge', 'axis': '1 0 0', 'pos': '-0.48 1.00 0.16', 'damping': joint_damping['hip']})
 
         # Lower part
         # Position the lower part based on the total length of the upper part to continue from its end

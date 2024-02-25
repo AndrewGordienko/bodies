@@ -128,7 +128,8 @@ def create_ant_model(num_creatures=9):
         # Adjust the initial position to spread out the creatures
         initial_position = (creature_id - num_creatures / 2, 0, 0.75)
         
-        torso_obj = Torso(name=f'torso_{creature_id}', position=initial_position)
+        # torso_obj = Torso(name=f'torso_{creature_id}', position=initial_position)
+        torso_obj = Torso(name=f'torso_{creature_id}', position=initial_position, size = (0.78, 1.32, 0.44))
         torso_xml = torso_obj.to_xml(layer, color)
         worldbody.append(torso_xml)
 
@@ -141,7 +142,8 @@ def create_ant_model(num_creatures=9):
         # upper_size = (0.04, 0.04, 0.04*4)
         # lower_size = (0.04, 0.04, 0.04*4)
         # foot_size = (0.04, 0.04, 0.04*4)
-        upper_size = (0.04, 0.04, 0.08)
+        # upper_size = (0.04, 0.04, 0.04)
+        upper_size = (0.60, 0.39, 0.42) # switched 2nd and 3rd arguments for mujoco
         lower_size = (0.04, 0.04, 0.04)
         foot_size = (0.04, 0.04, 0.04)
         # upper_size = (0.04*4, 0.04, 0.04)

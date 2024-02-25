@@ -56,7 +56,7 @@ def load_and_render_soccer_env(xml_string):
 # Generate the XML for the soccer environment
 # xml_soccer = create_soccer_environment()
 # xml_soccer =  create_ant_model(num_creatures=9)
-xml_soccer, _ =  create_ant_model(num_creatures=9)
+xml_soccer, _ =  create_ant_model(num_creatures=1)
 
 # Load and render the environment
 load_and_render_soccer_env(xml_soccer)

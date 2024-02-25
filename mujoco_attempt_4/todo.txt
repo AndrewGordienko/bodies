@@ -6,7 +6,7 @@ X- custom set the position of that 1 leg
 X- choose the correct hinge joint axis
 X- move the hinge joint anchor to the correct position (first gotta figure out how to even do this)
 O- make it the right dims as the first pair of segments in TWO_ARM_ROWER.
-O get test configuration 1.5 working (check notebook for diagram.)
+X get test configuration 1.5 working (check notebook for diagram.)
 - step by step, with config 2, 3, ... , manually build up the TWO_ARM_ROWER.
 - automate this process given the necessary description exported from unity.
 - make sure that changing joints from ball to hinge doesnt break the size of the action vector.
