@@ -77,6 +77,7 @@ class Segment:
                 'size': '0.01'
             })
 
+    
         return segment
 
 

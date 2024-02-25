@@ -22,3 +22,9 @@
 -- the segment's parent's type id (one byte, can just handle as an int) // maybe easiest just to not use this
 -- the segment's joint type (none, fixed, hinge)
 -- the segment's joint anchorpos, if none (none), elif fixed or hinge (x,y,z pos relative to parents origin)
+
+
+- okk so based on diffchecker, there seem to be 2 main differences.
+-- 1. the sensor stuff doesnt seem to be added properly at the end. 
+-- 2. the positions are different
+---

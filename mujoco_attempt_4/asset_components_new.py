@@ -97,7 +97,7 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
     worldbody = ET.SubElement(mujoco_model, 'worldbody')
     worldbody.append(create_floor_xml(size=FLOOR_SIZE))
 
-    actuator = ET.SubElement(mujoco_model, 'actuator')
+    # actuator = ET.SubElement(mujoco_model, 'actuator')
 
     # creature_leg_info = {}  # Dictionary to store leg and subpart info
     
@@ -145,6 +145,15 @@ def create_creature_xml(creature_id, layer, color, initial_position, blueprint):
             creature_id=creature_id
         )
         creature.append(segment.to_xml(layer))
+
+        # Add motors for each joint
+        ET.SubElement(actuator, 'motor', attrib={
+            'name': f'{leg_name}_hip_motor',
+            'joint': f'{leg_name}_hip_joint',
+            'ctrllimited': 'true',
+            'ctrlrange': '-1 1',
+            'gear': str(motor_gears['hip'])
+        })
 
     return creature
 
