@@ -146,7 +146,7 @@ def create_ant_model(num_creatures=9):
         # upper_size = (0.04*4, 0.04, 0.04)
         # lower_size = (0.04*4, 0.04, 0.04)
         # foot_size = (0.04*4, 0.04, 0.04)
-        position = (0, -torso_obj.size[1]/2 - 0.04, 0)
+        position = (0, -torso_obj.size[1]-0.04, 0)
 
         leg_info = []
 
