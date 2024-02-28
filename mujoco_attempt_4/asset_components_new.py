@@ -23,6 +23,11 @@ def swap_yz(t):
 def tuple_to_str(t):
     return ' '.join(map(str, t))
 
+def add_collision_exclusions(mujoco_model, exclusions):
+    contact = ET.SubElement(mujoco_model, 'contact')
+    for ex in exclusions:
+        ET.SubElement(contact, 'exclude', attrib={'body1': ex[0], 'body2': ex[1]})
+
 def create_assets_xml():
     assets = ET.Element('asset')
 
@@ -105,6 +110,7 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
     # Define a list of colors for flags and creatures
     colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink', 'grey', 'brown']  # Add more colors if needed
 
+    exclusions = []
     for creature_id in range(num_creatures):
         layer = creature_id + 1
         color = colors[creature_id % len(colors)]
@@ -116,6 +122,12 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
 
         creature_xml = create_creature_xml(creature_id, layer, color, initial_position, blueprint, actuator)
         worldbody.append(creature_xml)
+
+        for segment_id in range(len(blueprint)):
+            for i in range(segment_id + 1, len(blueprint)):
+                print(f'creature_{creature_id}_segment_{segment_id}', f'creature_{creature_id}_segment_{i}')
+                exclusions.append((f'creature_{creature_id}_segment_{segment_id}', f'creature_{creature_id}_segment_{i}'))
+            # exclusions.append((f'creature_{creature_id}_segment_{segment_id}', f'creature_{creature_id}_segment_{segment_id + 1}'))
 
     # Add sensors
     sensors = ET.SubElement(mujoco_model, 'sensor')

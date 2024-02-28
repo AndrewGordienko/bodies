@@ -1397,12 +1397,17 @@ def convert_json_to_blueprint(json_input):
         size = (item["Size"]["x"], item["Size"]["z"], item["Size"]["y"])
         color = (item["Color"]["x"], item["Color"]["y"], item["Color"]["z"])
 
-        # Handle parent and subtraction for position if needed
-        if item["ParentUniqueId"] is not None and str(item["ParentUniqueId"]) in blueprint:
-            parent_position = blueprint[str(item["ParentUniqueId"])]["position"]
-            parent_size = blueprint[str(item["ParentUniqueId"])]["size"]
-            # Subtract parent position from current position and adjust Z value
-            adjusted_position = tuple(np.subtract(position[:2], parent_position[:2])) + (position[2] + parent_size[2] + 0.00000001,)
+        # # Handle parent and subtraction for position if needed
+        # if item["ParentUniqueId"] is not None and str(item["ParentUniqueId"]) in blueprint:
+        #     parent_position = blueprint[str(item["ParentUniqueId"])]["position"]
+        #     parent_size = blueprint[str(item["ParentUniqueId"])]["size"]
+        #     # Subtract parent position from current position and adjust Z value
+        #     adjusted_position = tuple(np.subtract(position[:2], parent_position[:2])) + (position[2] + parent_size[2] + 0.00000001,)
+        # else:
+        #     adjusted_position = position
+        
+        if int(unique_id) == 1:
+            adjusted_position = (position[0], position[1], position[2])
         else:
             adjusted_position = position
 
@@ -1454,7 +1459,7 @@ def convert_json_to_blueprint(json_input):
 
     return blueprint
 
-blueprint = convert_json_to_blueprint(json_input_full_2seg)
+blueprint = convert_json_to_blueprint(json_input_full_allseg)
 
 manual_blueprint = {
     '0': {
