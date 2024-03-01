@@ -157,7 +157,8 @@ def create_creature_xml(creature_id, layer, color, initial_position, blueprint, 
             joint_anchorpos=segment_info['joint_anchorpos'],
             joint_axis=segment_info['joint_axis'],
             color=color,
-            creature_id=creature_id
+            creature_id=creature_id,
+            mujoco_model=mujoco_model
         )
         creature.append(segment.to_xml(layer))
 

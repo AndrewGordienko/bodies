@@ -33,8 +33,10 @@ class Segment:
         # write code to find the element in ET by f'segment_{self.unique_id'
         # segment_parent = ET.find(f".//body[@name='segment_{self.parent_unique_id}']")
         segment_parent = self.mujoco_model.find(f'creature_{self.creature_id}_segment_{self.parent_unique_id}')
-        
-        segment = ET.SubElement(segment_parent, 'body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
+        if segment_parent is not None:
+            segment = ET.SubElement(segment_parent, 'body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
+        else:
+            segment = ET.Element('body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
         
 
         # segment_parent = ET.Element('body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
@@ -45,6 +47,7 @@ class Segment:
             'type': 'box', 
             'size': tuple_to_str(self.size), 
             'pos': '0 0 0', 
+            # 'pos': tuple_to_str(self.position), 
             'contype': '1', 
             'conaffinity': str(layer),
             'material': self.color  
