@@ -122,7 +122,7 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
         # Adjust the initial position to spread out the creatures
         initial_position = (creature_id - num_creatures / CREATURE_SPACING, 0, CREATURE_SPAWN_HEIGHT)
 
-        creature_xml = create_creature_xml(creature_id, layer, color, initial_position, blueprint, actuator)
+        creature_xml = create_creature_xml(creature_id, layer, color, initial_position, blueprint, actuator, mujoco_model)
         worldbody.append(creature_xml)
 
         for segment_id in range(len(blueprint)):
@@ -142,7 +142,7 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
     return xml_string, {}
     # return xml_string
 
-def create_creature_xml(creature_id, layer, color, initial_position, blueprint, actuator):
+def create_creature_xml(creature_id, layer, color, initial_position, blueprint, actuator, mujoco_model):
     creature = ET.Element('body', attrib={'name': f'creature_{creature_id}', 'pos': tuple_to_str(initial_position)})
 
     for segment_id, segment_info in blueprint.items():

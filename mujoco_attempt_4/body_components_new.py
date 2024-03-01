@@ -14,7 +14,7 @@ def tuple_to_str(t):
 
 # Also, joint_type is assumed to be 'hinge' or 'fixed' for all joints for now.
 class Segment:
-    def __init__(self, unique_id=0, position=(0, 0, 0), rotation=(0, 0, 0), size=(1,1,1), parent_unique_id=0, joint_type='hinge', joint_anchorpos=(0,0,0), joint_axis=(1,0,0), color='0.5 0.5 0.5', creature_id = '0'):
+    def __init__(self, unique_id=0, position=(0, 0, 0), rotation=(0, 0, 0), size=(1,1,1), parent_unique_id=0, joint_type='hinge', joint_anchorpos=(0,0,0), joint_axis=(1,0,0), color='0.5 0.5 0.5', creature_id = '0', mujoco_model=None):
         self.unique_id = unique_id
         self.position = position
         self.rotation = rotation
@@ -26,11 +26,13 @@ class Segment:
         self.color = color
         self.creature_id = creature_id
         self.name = f'creature_{self.creature_id}_segment_{self.unique_id}'
+        self.mujoco_model = mujoco_model
 
     def to_xml(self, layer):
 
         # write code to find the element in ET by f'segment_{self.unique_id'
-        segment_parent = ET.find(f".//body[@name='segment_{self.parent_unique_id}']")
+        # segment_parent = ET.find(f".//body[@name='segment_{self.parent_unique_id}']")
+        segment_parent = self.mujoco_model.find(f'creature_{self.creature_id}_segment_{self.parent_unique_id}')
         
         segment = ET.SubElement(segment_parent, 'body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
         
