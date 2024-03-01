@@ -27,6 +27,8 @@ def add_collision_exclusions(mujoco_model, exclusions):
     contact = ET.SubElement(mujoco_model, 'contact')
     for ex in exclusions:
         ET.SubElement(contact, 'exclude', attrib={'body1': ex[0], 'body2': ex[1]})
+    return
+        
 
 def create_assets_xml():
     assets = ET.Element('asset')

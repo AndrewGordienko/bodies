@@ -28,8 +28,15 @@ class Segment:
         self.name = f'creature_{self.creature_id}_segment_{self.unique_id}'
 
     def to_xml(self, layer):
-        segment = ET.Element('body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
+
+        # write code to find the element in ET by f'segment_{self.unique_id'
+        segment_parent = ET.find(f".//body[@name='segment_{self.parent_unique_id}']")
         
+        segment = ET.SubElement(segment_parent, 'body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
+        
+
+        # segment_parent = ET.Element('body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
+
 
         ET.SubElement(segment, 'geom', attrib={
             'name': f'{self.name}_geom', 
