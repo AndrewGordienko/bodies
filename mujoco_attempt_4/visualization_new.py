@@ -9,6 +9,8 @@ from asset_components_new import create_flags_and_creatures
 import math
 import json
 
+
+
 # Given JSON input
 json_input_pruned_2seg = [
   {
@@ -37,7 +39,7 @@ json_input_pruned_2seg = [
   }
 ]
 
-# TODO: replace nulls with Nones during reading of the json file
+# TODO: replace Nones with Nones during reading of the json file
 json_input_full_2seg = [
   {
     "UniqueId": 0,
@@ -1770,13 +1772,561 @@ json_input_3_seg_worm = [
 
 ]
 
+json_input_2_legged_shlawg = [
+  {
+    "UniqueId": 0,
+    "TypeId": 1,
+    "Position": {
+      "x": 0.0,
+      "y": -5.33999634,
+      "z": 0.0,
+      "normalized": {
+        "x": 0.0,
+        "y": -1.0,
+        "z": 0.0,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 5.33999634,
+      "sqrMagnitude": 28.51556
+    },
+    "LocalPosition": {
+      "x": 0.0,
+      "y": -5.33999634,
+      "z": 0.0,
+      "normalized": {
+        "x": 0.0,
+        "y": -1.0,
+        "z": 0.0,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 5.33999634,
+      "sqrMagnitude": 28.51556
+    },
+    "Rotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "LocalRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "Size": {
+      "x": 0.61585325,
+      "y": 1.16211057,
+      "z": 0.5898805,
+      "normalized": {
+        "x": 0.427250057,
+        "y": 0.80621773,
+        "z": 0.409231424,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 1.4414351,
+      "sqrMagnitude": 2.07773519
+    },
+    "ParentUniqueId": None,
+    "JointType": None,
+    "JointAnchorPos": None,
+    "JointAxis": None,
+    "Color": {
+      "x": 27.0,
+      "y": 255.0,
+      "z": 233.0,
+      "normalized": {
+        "x": 0.07792833,
+        "y": 0.735989749,
+        "z": 0.672492564,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 346.472229,
+      "sqrMagnitude": 120043.0
+    }
+  },
+  {
+    "UniqueId": 1,
+    "TypeId": 2,
+    "Position": {
+      "x": -0.293862581,
+      "y": -4.177886,
+      "z": 0.0938186646,
+      "normalized": {
+        "x": -0.07014668,
+        "y": -0.9972853,
+        "z": 0.022395052,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.00000012
+      },
+      "magnitude": 4.18925858,
+      "sqrMagnitude": 17.5498886
+    },
+    "LocalPosition": {
+      "x": -0.293862581,
+      "y": -4.177886,
+      "z": 0.0938186646,
+      "normalized": {
+        "x": -0.07014668,
+        "y": -0.9972853,
+        "z": 0.022395052,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.00000012
+      },
+      "magnitude": 4.18925858,
+      "sqrMagnitude": 17.5498886
+    },
+    "Rotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "LocalRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "Size": {
+      "x": 0.221193358,
+      "y": 0.82274735,
+      "z": 0.6453129,
+      "normalized": {
+        "x": 0.206960753,
+        "y": 0.769808,
+        "z": 0.603790462,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 1.06876957,
+      "sqrMagnitude": 1.14226842
+    },
+    "ParentUniqueId": 0,
+    "JointType": "hinge",
+    "JointAnchorPos": {
+      "x": -0.4771633,
+      "y": 0.9999999,
+      "z": 0.159046888,
+      "normalized": {
+        "x": -0.426279962,
+        "y": 0.8933627,
+        "z": 0.14208658,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.00000012
+      },
+      "magnitude": 1.119366,
+      "sqrMagnitude": 1.25298047
+    },
+    "JointAxis": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0,
+      "magnitude": 1.0,
+      "sqrMagnitude": 1.0
+    },
+    "Color": {
+      "x": 120.0,
+      "y": 157.0,
+      "z": 121.0,
+      "normalized": {
+        "x": 0.51788646,
+        "y": 0.6775681,
+        "z": 0.522202134,
+        "normalized": {
+          "x": 0.5178865,
+          "y": 0.677568138,
+          "z": 0.5222022,
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000024
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.99999994
+      },
+      "magnitude": 231.711029,
+      "sqrMagnitude": 53690.0
+    }
+  },
+  {
+    "UniqueId": 2,
+    "TypeId": 2,
+    "Position": {
+      "x": 0.307926655,
+      "y": -5.20444965,
+      "z": -0.08531189,
+      "normalized": {
+        "x": 0.05905484,
+        "y": -0.9981206,
+        "z": -0.0163613,
+        "normalized": {
+          "x": 0.0590548441,
+          "y": -0.998120666,
+          "z": -0.0163613018,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.9999999
+      },
+      "magnitude": 5.214249,
+      "sqrMagnitude": 27.1883926
+    },
+    "LocalPosition": {
+      "x": 0.307926655,
+      "y": -5.20444965,
+      "z": -0.08531189,
+      "normalized": {
+        "x": 0.05905484,
+        "y": -0.9981206,
+        "z": -0.0163613,
+        "normalized": {
+          "x": 0.0590548441,
+          "y": -0.998120666,
+          "z": -0.0163613018,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.9999999
+      },
+      "magnitude": 5.214249,
+      "sqrMagnitude": 27.1883926
+    },
+    "Rotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "LocalRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "Size": {
+      "x": 0.165260255,
+      "y": 0.6146995,
+      "z": 0.482132822,
+      "normalized": {
+        "x": 0.206960753,
+        "y": 0.769808,
+        "z": 0.603790462,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 0.798510134,
+      "sqrMagnitude": 0.6376184
+    },
+    "ParentUniqueId": 0,
+    "JointType": "hinge",
+    "JointAnchorPos": {
+      "x": 0.50000006,
+      "y": 0.116638377,
+      "z": -0.144625708,
+      "normalized": {
+        "x": 0.9373737,
+        "y": 0.218667477,
+        "z": -0.271136642,
+        "normalized": {
+          "x": 0.937373757,
+          "y": 0.218667492,
+          "z": -0.271136671,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.99999994
+      },
+      "magnitude": 0.533405244,
+      "sqrMagnitude": 0.284521163
+    },
+    "JointAxis": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0,
+      "magnitude": 1.0,
+      "sqrMagnitude": 1.0
+    },
+    "Color": {
+      "x": 120.0,
+      "y": 157.0,
+      "z": 121.0,
+      "normalized": {
+        "x": 0.51788646,
+        "y": 0.6775681,
+        "z": 0.522202134,
+        "normalized": {
+          "x": 0.5178865,
+          "y": 0.677568138,
+          "z": 0.5222022,
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000024
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.99999994
+      },
+      "magnitude": 231.711029,
+      "sqrMagnitude": 53690.0
+    }
+  },
+  {
+    "UniqueId": 3,
+    "TypeId": 2,
+    "Position": {
+      "x": -0.1346035,
+      "y": -4.177886,
+      "z": 0.258509636,
+      "normalized": {
+        "x": -0.0321399756,
+        "y": -0.9975755,
+        "z": 0.0617256872,
+        "normalized": {
+          "x": -0.03213998,
+          "y": -0.9975756,
+          "z": 0.06172569,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.99999994
+      },
+      "magnitude": 4.18804,
+      "sqrMagnitude": 17.5396767
+    },
+    "LocalPosition": {
+      "x": -0.1346035,
+      "y": -4.177886,
+      "z": 0.258509636,
+      "normalized": {
+        "x": -0.0321399756,
+        "y": -0.9975755,
+        "z": 0.0617256872,
+        "normalized": {
+          "x": -0.03213998,
+          "y": -0.9975756,
+          "z": 0.06172569,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.00000012
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.99999994
+      },
+      "magnitude": 4.18804,
+      "sqrMagnitude": 17.5396767
+    },
+    "Rotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "LocalRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "Size": {
+      "x": 0.386039972,
+      "y": 1.43590808,
+      "z": 1.126239,
+      "normalized": {
+        "x": 0.206960768,
+        "y": 0.769808,
+        "z": 0.6037905,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 1.86528087,
+      "sqrMagnitude": 3.47927284
+    },
+    "ParentUniqueId": 0,
+    "JointType": "hinge",
+    "JointAnchorPos": {
+      "x": -0.218564242,
+      "y": 0.9999999,
+      "z": 0.438240647,
+      "normalized": {
+        "x": -0.196290344,
+        "y": 0.8980898,
+        "z": 0.3935795,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.0
+      },
+      "magnitude": 1.11347425,
+      "sqrMagnitude": 1.239825
+    },
+    "JointAxis": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 1.0,
+      "magnitude": 1.0,
+      "sqrMagnitude": 1.0
+    },
+    "Color": {
+      "x": 120.0,
+      "y": 157.0,
+      "z": 121.0,
+      "normalized": {
+        "x": 0.51788646,
+        "y": 0.6775681,
+        "z": 0.522202134,
+        "normalized": {
+          "x": 0.5178865,
+          "y": 0.677568138,
+          "z": 0.5222022,
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000024
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.99999994
+      },
+      "magnitude": 231.711029,
+      "sqrMagnitude": 53690.0
+    }
+  },
+  {
+    "UniqueId": 4,
+    "TypeId": 2,
+    "Position": {
+      "x": 0.108067513,
+      "y": -4.29362249,
+      "z": -0.29494,
+      "normalized": {
+        "x": 0.0251022242,
+        "y": -0.997334659,
+        "z": -0.06850949,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.00000012
+      },
+      "magnitude": 4.305097,
+      "sqrMagnitude": 18.5338631
+    },
+    "LocalPosition": {
+      "x": 0.108067513,
+      "y": -4.29362249,
+      "z": -0.29494,
+      "normalized": {
+        "x": 0.0251022242,
+        "y": -0.997334659,
+        "z": -0.06850949,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.00000012
+      },
+      "magnitude": 4.305097,
+      "sqrMagnitude": 18.5338631
+    },
+    "Rotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "LocalRotation": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": 0.0,
+      "magnitude": 0.0,
+      "sqrMagnitude": 0.0
+    },
+    "Size": {
+      "x": 0.4374656,
+      "y": 1.62719011,
+      "z": 1.27626884,
+      "normalized": {
+        "x": 0.206960753,
+        "y": 0.769807935,
+        "z": 0.603790462,
+        "normalized": {
+          "x": 0.206960768,
+          "y": 0.769808,
+          "z": 0.6037905,
+          "magnitude": 1.0,
+          "sqrMagnitude": 1.0
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.99999994
+      },
+      "magnitude": 2.11376119,
+      "sqrMagnitude": 4.467986
+    },
+    "ParentUniqueId": 0,
+    "JointType": "hinge",
+    "JointAnchorPos": {
+      "x": 0.175476074,
+      "y": 0.9004082,
+      "z": -0.499999523,
+      "normalized": {
+        "x": 0.167958051,
+        "y": 0.8618315,
+        "z": -0.478577763,
+        "magnitude": 1.0,
+        "sqrMagnitude": 1.00000012
+      },
+      "magnitude": 1.0447613,
+      "sqrMagnitude": 1.09152627
+    },
+    "JointAxis": {
+      "x": 0.0,
+      "y": 0.0,
+      "z": -1.0,
+      "magnitude": 1.0,
+      "sqrMagnitude": 1.0
+    },
+    "Color": {
+      "x": 120.0,
+      "y": 157.0,
+      "z": 121.0,
+      "normalized": {
+        "x": 0.51788646,
+        "y": 0.6775681,
+        "z": 0.522202134,
+        "normalized": {
+          "x": 0.5178865,
+          "y": 0.677568138,
+          "z": 0.5222022,
+          "magnitude": 1.00000012,
+          "sqrMagnitude": 1.00000024
+        },
+        "magnitude": 0.99999994,
+        "sqrMagnitude": 0.99999994
+      },
+      "magnitude": 231.711029,
+      "sqrMagnitude": 53690.0
+    }
+  }
+]
+
+def get_position_by_unique_id(json_input, unique_id):
+    # Iterate through each item in the json_input list
+    for item in json_input:
+        # Check if the current item's UniqueId matches the given unique_id
+        if item["UniqueId"] == unique_id:
+            # If a match is found, return the Position of that item
+            return item["Position"]
+    # If no matching UniqueId is found, return None to indicate not found
+    return None
 
 def convert_json_to_blueprint(json_input):
     blueprint = {}
     for item in json_input:
         unique_id = str(item["UniqueId"])
-        # if int(unique_id) > 1:
-            # break
+        # if int(unique_id) > 2:
+        #     break
         position = (item["Position"]["x"], item["Position"]["z"], item["Position"]["y"])
         rotation = (item["Rotation"]["x"], item["Rotation"]["z"], item["Rotation"]["y"])
         size = (item["Size"]["x"], item["Size"]["z"], item["Size"]["y"])
@@ -1784,14 +2334,19 @@ def convert_json_to_blueprint(json_input):
         parent_unique_id = item["ParentUniqueId"]
 
         if parent_unique_id is not None:
+            parent_position_jsonthing = get_position_by_unique_id(json_input, parent_unique_id)
+            parent_position = (parent_position_jsonthing["x"], parent_position_jsonthing["z"], parent_position_jsonthing["y"])
+            print(type(parent_position), parent_position)
+
+
             # parent_position = json_input[parent_unique_id]["Position"]
-            parent_item = next((item for item in json_input if item["UniqueId"] == parent_unique_id), None)
-            # parent_position = (parent_item["Position"]["x"], parent_item["Position"]["z"], parent_item["Position"]["y"])
-            parent_position = (0.0, 0.0, 0.0)
+            # parent_item = next((item for item in json_input if item["UniqueId"] == parent_unique_id), None)
+            # # parent_position = (0.0, 0.0, 0.0)
+            # parent_position = parent_item["Position"]
             # swap the 2nd and 3rd elements of the tuple
             # parent_position = (parent_position["x"], parent_position["z"], parent_position["y"])
         
-            adjusted_position = tuple(np.subtract((0.00, 0.00, -5.34), (-0.37, 0.07, -4.02)))[:2] + (-4.02 + 0.42 + 0.00000001,)
+            # adjusted_position = tuple(np.subtract((0.00, 0.00, -5.34), (-0.37, 0.07, -4.02)))[:2] + (-4.02 + 0.42 + 0.00000001,)
             adjusted_position = tuple(np.subtract(np.array(parent_position), np.array(position)))[:2] + (position[2] + size[2] + 0.00000001,) #yz 
             # print(parent_position, position, size, unique_id, parent_unique_id)
             # adjusted_position = tuple(np.subtract(parent_position, position)[:2] + (position[2] + size[2] + 0.00000001,)) #yz swapped, then subtracted from the position of the parent segment, then z value replaced accordingly. TODO: verify that this works.. intuitively it's a bit sus
@@ -1850,8 +2405,8 @@ def convert_json_to_blueprint(json_input):
 
 
         blueprint[unique_id] = {
-            # 'position': position,
-            'position': adjusted_position,
+            'position': position,
+            # 'position': adjusted_position,
             'rotation': rotation,
             'size': size,
             'parent_unique_id': item["ParentUniqueId"],
@@ -1867,7 +2422,7 @@ def convert_json_to_blueprint(json_input):
 
     return blueprint
 
-blueprint = convert_json_to_blueprint(json_input_full_allseg)
+blueprint = convert_json_to_blueprint(json_input_3_seg_worm)
 
 manual_blueprint = {
     '0': {

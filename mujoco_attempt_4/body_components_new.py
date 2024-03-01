@@ -12,6 +12,10 @@ def tuple_to_str(t):
 
 # From this point onwards, we're assuming that everything has already been converted into the mujoco coordinate system (i.e., y and z swapped) before being passed into this.
 
+
+spawned_segment_elements = [None] * 10 #TODO: update with actual total number of segments
+
+
 # Also, joint_type is assumed to be 'hinge' or 'fixed' for all joints for now.
 class Segment:
     def __init__(self, unique_id=0, position=(0, 0, 0), rotation=(0, 0, 0), size=(1,1,1), parent_unique_id=0, joint_type='hinge', joint_anchorpos=(0,0,0), joint_axis=(1,0,0), color='0.5 0.5 0.5', creature_id = '0', mujoco_model=None):
@@ -32,11 +36,25 @@ class Segment:
 
         # write code to find the element in ET by f'segment_{self.unique_id'
         # segment_parent = ET.find(f".//body[@name='segment_{self.parent_unique_id}']")
-        segment_parent = self.mujoco_model.find(f'creature_{self.creature_id}_segment_{self.parent_unique_id}')
-        if segment_parent is not None:
-            segment = ET.SubElement(segment_parent, 'body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
+        # segment_parent = self.mujoco_model.find(f'creature_{self.creature_id}_segment_{self.parent_unique_id}')
+        # segment_parent = self.mujoco_model.find(".//body[@name='creature_0_segment_0']")
+        if self.parent_unique_id is not None:
+            segment_parent = spawned_segment_elements[self.parent_unique_id]
         else:
-            segment = ET.Element('body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
+            segment_parent = None
+
+        print("segment name:", self.name)
+        print("parent name:", f'creature_{self.creature_id}_segment_{self.parent_unique_id}')
+
+        if segment_parent is not None:
+            print("segment_parent name: ", segment_parent.get('name'))
+            segment = ET.SubElement(segment_parent, 'body', attrib={'name': self.name, 'pos': tuple_to_str(self.position), 'euler': tuple_to_str(self.rotation)})
+            spawned_segment_elements[self.unique_id] = segment
+        else:
+            print("parent is None")
+            segment = ET.Element('body', attrib={'name': self.name, 'pos': tuple_to_str(self.position), 'euler': tuple_to_str(self.rotation)})
+            spawned_segment_elements[self.unique_id] = segment
+            
         
 
         # segment_parent = ET.Element('body', attrib={'name': f'segment_{self.unique_id}', 'pos': tuple_to_str(self.position)})
@@ -46,8 +64,9 @@ class Segment:
             'name': f'{self.name}_geom', 
             'type': 'box', 
             'size': tuple_to_str(self.size), 
-            'pos': '0 0 0', 
-            # 'pos': tuple_to_str(self.position), 
+            # 'pos': '0 0 0', 
+            'pos': tuple_to_str(self.position), 
+            'euler': tuple_to_str(self.rotation),
             'contype': '1', 
             'conaffinity': str(layer),
             'material': self.color  

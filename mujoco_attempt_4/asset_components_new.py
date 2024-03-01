@@ -127,7 +127,7 @@ def create_flags_and_creatures(num_creatures=9, blueprint={}):
 
         for segment_id in range(len(blueprint)):
             for i in range(segment_id + 1, len(blueprint)):
-                print(f'creature_{creature_id}_segment_{segment_id}', f'creature_{creature_id}_segment_{i}')
+                # print(f'creature_{creature_id}_segment_{segment_id}', f'creature_{creature_id}_segment_{i}')
                 exclusions.append((f'creature_{creature_id}_segment_{segment_id}', f'creature_{creature_id}_segment_{i}'))
             # exclusions.append((f'creature_{creature_id}_segment_{segment_id}', f'creature_{creature_id}_segment_{segment_id + 1}'))
 
@@ -164,9 +164,7 @@ def create_creature_xml(creature_id, layer, color, initial_position, blueprint, 
 
         if segment.joint_type == 'hinge':
             # Add motors for each joint
-            ET.SubElement(actuator, 'motor', attrib={
-                # 'name': f'{leg_name}_hip_motor',
-                # 'joint': f'{leg_name}_hip_joint',
+            ET.SubElement(actuator, 'motor', attrib={ 
                 'name': f'{segment.name}_motor',
                 'joint': f'{segment.name}_joint',
                 'ctrllimited': 'true',
