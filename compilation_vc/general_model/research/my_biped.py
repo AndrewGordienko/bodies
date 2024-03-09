@@ -168,6 +168,9 @@ class BipedalWalker(gym.Env, EzPickle):
         EzPickle.__init__(self, render_mode, hardcore)
         self.isopen = True
 
+        self.legs = []  # Initialize the legs list
+        self.joints = []  # Initialize the joints list
+        
         self.world = Box2D.b2World()
         self.terrain: List[Box2D.b2Body] = []
         self.hull: Optional[Box2D.b2Body] = None
@@ -443,33 +446,32 @@ class BipedalWalker(gym.Env, EzPickle):
         self.hull.color2 = (76, 76, 127)
         self.hull.ApplyForceToCenter((self.np_random.uniform(-INITIAL_RANDOM, INITIAL_RANDOM), 0), True)
 
-        self.legs = []
-        self.joints = []
-
-        # Randomly decide the number of legs (1 or 2) and their subparts (1 or 2)
-        num_legs = self.np_random.integers(1, 3)  # Randomly choose 1 or 2 legs
-        print("num_legs: ", num_legs)
-        # num_legs = 2
+        num_legs = self.np_random.integers(1, 3)  # Randomly choosing between 1 and 2 legs
         for i in range(num_legs):
-            leg_segments = self.np_random.integers(1, 3)  # Randomly choose 1 or 2 segments per leg
-            print("leg_segments: ", leg_segments)
-            # leg_segments = 2 
+            leg_segments = self.np_random.integers(1, 3)  # Randomly choosing between 1 and 2 segments per leg
             prev_body = self.hull
             for j in range(leg_segments):
-                # Determine the position of the leg segment
-                position = (init_x, init_y - LEG_H / 2 - LEG_DOWN - LEG_H * j)
-                leg = self.world.CreateDynamicBody(position=position, angle=(0.05 if i % 2 == 0 else -0.05), 
-                                                fixtures=LEG_FD if j == 0 else LOWER_FD)
-                leg.color1 = (255, 0, 0) if j == 0 else (0, 0, 255)
-                leg.color2 = (255, 255, 255)
-                leg.ground_contact = False  # Initialize the ground_contact attribute
+                leg_length = LEG_H if j == 0 else LEG_H * 0.8  # Making the lower leg shorter
+                leg_fixture = LEG_FD if j == 0 else LOWER_FD  # Using predefined fixtures
                 
-                # Define the joint to connect the leg segment
+                # Adjust position to ensure legs start under the torso
+                leg_y = init_y - (LEG_H / 2 + LEG_DOWN) * (j + 1)
+
+                # Creating leg body
+                leg = self.world.CreateDynamicBody(
+                    position=(init_x, leg_y),
+                    angle=(-0.05 if i % 2 == 0 else 0.05),  # Minor adjustment to ensure downward position
+                    fixtures=leg_fixture
+                )
+                leg.color1 = (255, 0, 0) if i == 0 else (0, 0, 255)  # First leg red, second leg blue
+                leg.ground_contact = False
+
+                # Joint between hull/upper leg and lower leg
                 rjd = revoluteJointDef(
                     bodyA=prev_body,
                     bodyB=leg,
-                    localAnchorA=(0, -LEG_DOWN if j == 0 else LEG_H / 2),
-                    localAnchorB=(0, LEG_H / 2),
+                    localAnchorA=(0, LEG_DOWN if j == 0 else -leg_length / 2),
+                    localAnchorB=(0, leg_length / 2),
                     enableMotor=True,
                     enableLimit=True,
                     maxMotorTorque=MOTORS_TORQUE,
@@ -480,10 +482,10 @@ class BipedalWalker(gym.Env, EzPickle):
                 joint = self.world.CreateJoint(rjd)
                 self.legs.append(leg)
                 self.joints.append(joint)
-                prev_body = leg  # The current leg becomes the previous body for the next segment
+                prev_body = leg
 
         self.drawlist = self.terrain + self.legs + [self.hull]
-            
+                    
         class LidarCallback(Box2D.b2.rayCastCallback):
             def ReportFixture(self, fixture, point, normal, fraction):
                 if (fixture.filterData.categoryBits & 1) == 0:
@@ -677,9 +679,9 @@ class BipedalWalker(gym.Env, EzPickle):
                         gfxdraw.aapolygon(self.surf, path, obj.color1)
                         path.append(path[0])
                         pygame.draw.polygon(
-                            self.surf, color=obj.color2, points=path, width=1
+                            self.surf, color=obj.color1, points=path, width=1
                         )
-                        gfxdraw.aapolygon(self.surf, path, obj.color2)
+                        gfxdraw.aapolygon(self.surf, path, obj.color1)
                     else:
                         pygame.draw.aaline(
                             self.surf,
