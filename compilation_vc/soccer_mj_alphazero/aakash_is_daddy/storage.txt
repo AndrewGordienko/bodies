@@ -1,0 +1,49 @@
+def check_validity(self, action, state, player):
+        # Convert state indices to coordinates
+        player_pos = np.array(np.where(state == player)).T
+        ball_pos = np.array(np.where(state >= 10)).T  # Assuming '10' represents the ball
+
+        print("positions printing")
+        print(player_pos, ball_pos)
+        if player_pos.size > 0 and ball_pos.size > 0:  # Ensure player and ball positions are found
+            player_pos = player_pos[0]  # Take the first (and should be only) set of coordinates
+            ball_pos = ball_pos[0]  # Take the first (and should be only) set of coordinates
+
+            # Check if player is next to the ball and update ball position accordingly
+            if np.abs(player_pos[0] - ball_pos[0]) <= 1 and np.abs(player_pos[1] - ball_pos[1]) <= 1:
+                if action == 'MOVE_LEFT' and ball_pos[1] > 0:
+                    state[ball_pos[0], ball_pos[1]] = 0  # Clear current ball position
+                    ball_pos[1] -= 1  # Move ball left
+                elif action == 'MOVE_RIGHT' and ball_pos[1] < GRID_WIDTH - 1:
+                    state[ball_pos[0], ball_pos[1]] = 0
+                    ball_pos[1] += 1  # Move ball right
+                elif action == 'MOVE_UP' and ball_pos[0] > 0:
+                    state[ball_pos[0], ball_pos[1]] = 0
+                    ball_pos[0] -= 1  # Move ball up
+                elif action == 'MOVE_DOWN' and ball_pos[0] < GRID_HEIGHT - 1:
+                    state[ball_pos[0], ball_pos[1]] = 0
+                    ball_pos[0] += 1  # Move ball down
+                state[ball_pos[0], ball_pos[1]] = 10 + player  # Update state with new ball position
+
+            # Update player position based on action
+            # This simplistic approach does not handle other players or obstacles
+            print("player pos")
+            print(player_pos)
+            state[player_pos[0], player_pos[1]] = 0  # Clear current player position
+            if action == 'MOVE_LEFT' and player_pos[1] > 0:
+                player_pos[1] -= 1
+                print("left")
+            elif action == 'MOVE_RIGHT' and player_pos[1] < GRID_WIDTH - 1:
+                player_pos[1] += 1
+                print("right")
+            elif action == 'MOVE_UP' and player_pos[0] > 0:
+                player_pos[0] -= 1
+                print("up")
+            elif action == 'MOVE_DOWN' and player_pos[0] < GRID_HEIGHT - 1:
+                player_pos[0] += 1
+                print("down")
+            state[player_pos[0], player_pos[1]] = player  # Update state with new player position
+
+        #print("state printed below")
+        #print(state)
+        return state
