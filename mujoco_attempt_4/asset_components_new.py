@@ -6,7 +6,8 @@ from body_components_new import Segment
 JOINT_RANGE = '-75.0 75.0' # This is what we use in our unity evolution simulation.
 
 # NOTE: I believe these two we can tune as hyperparameters.
-MOTOR_GEAR = 20000.0
+# MOTOR_GEAR = 20000.0
+MOTOR_GEAR = 0.002
 JOINT_DAMPING = '4.0'
 
 FLOOR_SIZE = (10.0, 10.0, 0.1)

@@ -4,7 +4,8 @@ import xml.etree.ElementTree as ET
 JOINT_RANGE = '-75 75' # This is what we use in our unity evolution simulation.
 
 # NOTE: I believe these two we can tune as hyperparameters.
-MOTOR_GEAR = 20000
+# MOTOR_GEAR = 20000
+MOTOR_GEAR = 0.002
 JOINT_DAMPING = '4.0'
 
 def tuple_to_str(t):
