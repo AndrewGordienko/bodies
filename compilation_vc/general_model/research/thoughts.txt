@@ -1,0 +1,27 @@
+how were the zurich people able to make the code run fast
+
+how much data do you need to converge a model consisting of n neurons at l learning rate
+
+smaller model converges faster, requires less data
+you can even use fake random data to test that
+when does the weight delta drop to under a threshold (stop loss)
+for a given size
+run a grid search
+see what size your model should be for your compute resources
+etc
+characterize the influence of network size and depth on convergence rate
+
+just use a linear network
+see how many samples you need for a model of a given size to reach convergence
+do it on mnist if you must
+
+no do a procedural explicit search  over a range of sizes
+pushing each network to either a point of convergence or a predefined giveup point
+make a graph
+then look at how many rl samples you can generate per time via your env
+choose how many hours you want to train for
+and divide the samples needed by your generation rate to pick a size from your graph
+just, imagine a scientist
+what would a science bitch do
+experiment, gather data, make an informed decision
+
