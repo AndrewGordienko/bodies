@@ -4,7 +4,8 @@
 #include <string>
 #include <vector>
 #include <Eigen/Dense>
-#include <mujoco.h>
+// #include <mujoco.h>
+#include <mujoco/mujoco.h>
 #include "StepResult.h"
 #include <GLFW/glfw3.h>
 

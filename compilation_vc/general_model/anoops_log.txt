@@ -1,0 +1,618 @@
+man/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from CustomAntEnv.cpp:1:
+./CustomAntEnv.h:7:10: fatal error: 'mujoco.h' file not found
+#include <mujoco.h>
+         ^~~~~~~~~~
+1 error generated.
+error: command '/usr/bin/clang' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/mujoco/include
+error: unable to open output file 'build/temp.macosx-10.9-x86_64-3.8/myenv.o': 'No such file or directory'
+1 error generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/mujoco/include
+error: unable to open output file 'build/temp.macosx-10.9-x86_64-3.8/myenv.o': 'No such file or directory'
+1 error generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % mkdir -p build/temp.macosx-10.9-x86_64-3.8
+
+(venv) (base) anooprehman@anoop-air-2 general_model % mkdir -p build/temp.macosx-10.9-x86_64-3.8
+
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/mujoco/include
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+In file included from myenv.cpp:1278:
+./CustomAntEnv.h:7:10: fatal error: 'mujoco.h' file not found
+#include <mujoco.h>
+         ^~~~~~~~~~
+1 warning and 1 error generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/mujoco/include
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+In file included from myenv.cpp:1278:
+./CustomAntEnv.h:7:10: fatal error: 'mujoco.h' file not found
+#include <mujoco.h>
+         ^~~~~~~~~~
+1 warning and 1 error generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/mujoco/include
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+In file included from myenv.cpp:1280:
+./Environment.h:7:10: fatal error: 'mujoco.h' file not found
+#include <mujoco.h>
+         ^~~~~~~~~~
+1 warning and 1 error generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/mujoco/include
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+myenv.cpp:6398:3: warning: 'tp_print' is deprecated [-Wdeprecated-declarations]
+  0, /*tp_print*/
+  ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/cpython/object.h:260:5: note: 'tp_print' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/pyport.h:515:54: note: expanded from macro 'Py_DEPRECATED'
+#define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                     ^
+myenv.cpp:9185:76: warning: code will never be executed [-Wunreachable-code]
+        if (__Pyx_PyTuple_SET_ITEM(argstuple, (Py_ssize_t)i, args[i]) < 0) goto bad;
+                                                                           ^~~~~~~~
+myenv.cpp:9185:73: note: silence by adding parentheses to mark code as explicitly dead
+        if (__Pyx_PyTuple_SET_ITEM(argstuple, (Py_ssize_t)i, args[i]) < 0) goto bad;
+                                                                        ^
+                                                                        /* DISABLES CODE */ ( )
+myenv.cpp:11094:5: warning: 'tp_print' is deprecated [-Wdeprecated-declarations]
+    0,
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/cpython/object.h:260:5: note: 'tp_print' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/pyport.h:515:54: note: expanded from macro 'Py_DEPRECATED'
+#define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                     ^
+4 warnings generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % python test.py
+Traceback (most recent call last):
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/test.py", line 2, in <module>
+    import myenv  # Assuming 'myenv' is the compiled Cython module
+ImportError: dlopen(/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so, 0x0002): Library not loaded: '@rpath/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib'
+  Referenced from: '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so'
+  Reason: tried: '/Applications/MuJoCo.app/Contents/Frameworks/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Applications/MuJoCo.app/Contents/Frameworks/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/usr/local/lib/libmujoco.3.1.1.dylib' (no such file), '/usr/lib/libmujoco.3.1.1.dylib' (no such file)
+(venv) (base) anooprehman@anoop-air-2 general_model % pip show mujoco
+Name: mujoco
+Version: 3.1.3
+Summary: MuJoCo Physics Simulator
+Home-page: None
+Author: None
+Author-email: Google DeepMind <mujoco@deepmind.com>
+License: Apache License 2.0
+Location: /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages
+Requires: glfw, etils, absl-py, pyopengl, numpy
+Required-by: dm-control
+(venv) (base) anooprehman@anoop-air-2 general_model % pip install mujoco==3.1.2
+Collecting mujoco==3.1.2
+  Using cached mujoco-3.1.2-cp39-cp39-macosx_11_0_arm64.whl (5.3 MB)
+Requirement already satisfied: pyopengl in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.2) (3.1.7)
+Requirement already satisfied: glfw in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.2) (2.7.0)
+Requirement already satisfied: etils[epath] in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.2) (1.5.2)
+Requirement already satisfied: absl-py in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.2) (2.1.0)
+Requirement already satisfied: numpy in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.2) (1.26.4)
+Requirement already satisfied: importlib_resources in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from etils[epath]->mujoco==3.1.2) (6.1.3)
+Requirement already satisfied: typing_extensions in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from etils[epath]->mujoco==3.1.2) (4.10.0)
+Requirement already satisfied: zipp in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from etils[epath]->mujoco==3.1.2) (3.17.0)
+Requirement already satisfied: fsspec in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from etils[epath]->mujoco==3.1.2) (2024.2.0)
+Installing collected packages: mujoco
+  Attempting uninstall: mujoco
+    Found existing installation: mujoco 3.1.3
+    Uninstalling mujoco-3.1.3:
+      Successfully uninstalled mujoco-3.1.3
+Successfully installed mujoco-3.1.2
+WARNING: You are using pip version 21.1.3; however, version 24.0 is available.
+You should consider upgrading via the '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/bin/python -m pip install --upgrade pip' command.
+(venv) (base) anooprehman@anoop-air-2 general_model % python test.py           
+Traceback (most recent call last):
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/test.py", line 2, in <module>
+    import myenv  # Assuming 'myenv' is the compiled Cython module
+ImportError: dlopen(/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so, 0x0002): Library not loaded: '@rpath/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib'
+  Referenced from: '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so'
+  Reason: tried: '/Applications/MuJoCo.app/Contents/Frameworks/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Applications/MuJoCo.app/Contents/Frameworks/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/usr/local/lib/libmujoco.3.1.1.dylib' (no such file), '/usr/lib/libmujoco.3.1.1.dylib' (no such file)
+(venv) (base) anooprehman@anoop-air-2 general_model % pip install mujoco==3.1.1
+Collecting mujoco==3.1.1
+  Downloading mujoco-3.1.1-cp39-cp39-macosx_11_0_arm64.whl (5.3 MB)
+     |████████████████████████████████| 5.3 MB 4.7 MB/s 
+Requirement already satisfied: glfw in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.1) (2.7.0)
+Requirement already satisfied: absl-py in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.1) (2.1.0)
+Requirement already satisfied: pyopengl in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.1) (3.1.7)
+Requirement already satisfied: numpy in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.1) (1.26.4)
+Requirement already satisfied: etils[epath] in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from mujoco==3.1.1) (1.5.2)
+Requirement already satisfied: typing_extensions in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from etils[epath]->mujoco==3.1.1) (4.10.0)
+Requirement already satisfied: zipp in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from etils[epath]->mujoco==3.1.1) (3.17.0)
+Requirement already satisfied: fsspec in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from etils[epath]->mujoco==3.1.1) (2024.2.0)
+Requirement already satisfied: importlib_resources in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (from etils[epath]->mujoco==3.1.1) (6.1.3)
+Installing collected packages: mujoco
+  Attempting uninstall: mujoco
+    Found existing installation: mujoco 3.1.2
+    Uninstalling mujoco-3.1.2:
+      Successfully uninstalled mujoco-3.1.2
+Successfully installed mujoco-3.1.1
+WARNING: You are using pip version 21.1.3; however, version 24.0 is available.
+You should consider upgrading via the '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/bin/python -m pip install --upgrade pip' command.
+(venv) (base) anooprehman@anoop-air-2 general_model % python test.py           
+Traceback (most recent call last):
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/test.py", line 2, in <module>
+    import myenv  # Assuming 'myenv' is the compiled Cython module
+ImportError: dlopen(/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so, 0x0002): Library not loaded: '@rpath/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib'
+  Referenced from: '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so'
+  Reason: tried: '/Applications/MuJoCo.app/Contents/Frameworks/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Applications/MuJoCo.app/Contents/Frameworks/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/usr/local/lib/libmujoco.3.1.1.dylib' (no such file), '/usr/lib/libmujoco.3.1.1.dylib' (no such file)
+(venv) (base) anooprehman@anoop-air-2 general_model % pip show mujoco
+Name: mujoco
+Version: 3.1.1
+Summary: MuJoCo Physics Simulator
+Home-page: None
+Author: None
+Author-email: Google DeepMind <mujoco@deepmind.com>
+License: Apache License 2.0
+Location: /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages
+Requires: numpy, pyopengl, absl-py, glfw, etils
+Required-by: dm-control
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+myenv.cpp:6398:3: warning: 'tp_print' is deprecated [-Wdeprecated-declarations]
+  0, /*tp_print*/
+  ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/cpython/object.h:260:5: note: 'tp_print' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/pyport.h:515:54: note: expanded from macro 'Py_DEPRECATED'
+#define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                     ^
+myenv.cpp:9185:76: warning: code will never be executed [-Wunreachable-code]
+        if (__Pyx_PyTuple_SET_ITEM(argstuple, (Py_ssize_t)i, args[i]) < 0) goto bad;
+                                                                           ^~~~~~~~
+myenv.cpp:9185:73: note: silence by adding parentheses to mark code as explicitly dead
+        if (__Pyx_PyTuple_SET_ITEM(argstuple, (Py_ssize_t)i, args[i]) < 0) goto bad;
+                                                                        ^
+                                                                        /* DISABLES CODE */ ( )
+myenv.cpp:11094:5: warning: 'tp_print' is deprecated [-Wdeprecated-declarations]
+    0,
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/cpython/object.h:260:5: note: 'tp_print' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/pyport.h:515:54: note: expanded from macro 'Py_DEPRECATED'
+#define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                     ^
+4 warnings generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % python test.py
+Traceback (most recent call last):
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/test.py", line 2, in <module>
+    import myenv  # Assuming 'myenv' is the compiled Cython module
+ImportError: dlopen(/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so, 0x0002): Library not loaded: '@rpath/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib'
+  Referenced from: '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so'
+  Reason: tried: '/Applications/MuJoCo.app/Contents/Frameworks/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Applications/MuJoCo.app/Contents/Frameworks/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/Users/anooprehman/.pyenv/versions/3.9.6/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/opt/homebrew/lib/mujoco.framework/Versions/A/libmujoco.3.1.1.dylib' (no such file), '/usr/local/lib/libmujoco.3.1.1.dylib' (no such file), '/usr/lib/libmujoco.3.1.1.dylib' (no such file)
+(venv) (base) anooprehman@anoop-air-2 general_model % cd /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco
+(venv) (base) anooprehman@anoop-air-2 mujoco % ls
+MuJoCo (mjpython).app           _structs.cpython-39-darwin.so   plugin
+__init__.py                     bindings_test.py                render_test.py
+__pycache__                     cgl                             renderer.py
+_callbacks.cpython-39-darwin.so egl                             renderer_test.py
+_constants.cpython-39-darwin.so gl_context.py                   rollout.py
+_enums.cpython-39-darwin.so     glfw                            rollout_test.py
+_errors.cpython-39-darwin.so    include                         testdata
+_functions.cpython-39-darwin.so libmujoco.3.1.1.dylib           viewer.py
+_render.cpython-39-darwin.so    msh2obj.py                      viewer_test.py
+_rollout.cpython-39-darwin.so   msh2obj_test.py
+_simulate.cpython-39-darwin.so  osmesa
+(venv) (base) anooprehman@anoop-air-2 mujoco % export DYLD_LIBRARY_PATH=/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco:$DYLD_LIBRARY_PATH
+
+(venv) (base) anooprehman@anoop-air-2 mujoco % python test.py
+python: can't open file '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/test.py': [Errno 2] No such file or directory
+(venv) (base) anooprehman@anoop-air-2 mujoco % pwd
+/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco
+(venv) (base) anooprehman@anoop-air-2 mujoco % cd /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/Environment.h
+cd: not a directory: /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/Environment.h
+(venv) (base) anooprehman@anoop-air-2 mujoco % cd /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model             
+(venv) (base) anooprehman@anoop-air-2 general_model % python test.py
+Traceback (most recent call last):
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/test.py", line 2, in <module>
+    import myenv  # Assuming 'myenv' is the compiled Cython module
+ImportError: dlopen(/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/myenv.so, 0x0002): symbol not found in flat namespace (_PyGC_Disable)
+(venv) (base) anooprehman@anoop-air-2 general_model % python --version
+Python 3.9.6
+(venv) (base) anooprehman@anoop-air-2 general_model % pip install Cython
+Requirement already satisfied: Cython in /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages (3.0.9)
+WARNING: You are using pip version 21.1.3; however, version 24.0 is available.
+You should consider upgrading via the '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/bin/python -m pip install --upgrade pip' command.
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from CustomAntEnv.cpp:1:
+./CustomAntEnv.h:8:10: fatal error: 'mujoco/mujoco.h' file not found
+#include <mujoco/mujoco.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+error: command '/usr/bin/clang' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % ls                                 
+
+CustomAntEnv.cpp        asset_components.py     myenv.pyx               setup.py
+CustomAntEnv.h          body_components.py      myenv.so                test.py
+Environment.h           build                   ppo_agent.py
+StepResult.h            compilecommands.txt     readme.md
+anoops_log.txt          myenv.cpp               research
+(venv) (base) anooprehman@anoop-air-2 general_model % rm myenv.so
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+myenv.cpp:6398:3: warning: 'tp_print' is deprecated [-Wdeprecated-declarations]
+  0, /*tp_print*/
+  ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/cpython/object.h:260:5: note: 'tp_print' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/pyport.h:515:54: note: expanded from macro 'Py_DEPRECATED'
+#define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                     ^
+myenv.cpp:9185:76: warning: code will never be executed [-Wunreachable-code]
+        if (__Pyx_PyTuple_SET_ITEM(argstuple, (Py_ssize_t)i, args[i]) < 0) goto bad;
+                                                                           ^~~~~~~~
+myenv.cpp:9185:73: note: silence by adding parentheses to mark code as explicitly dead
+        if (__Pyx_PyTuple_SET_ITEM(argstuple, (Py_ssize_t)i, args[i]) < 0) goto bad;
+                                                                        ^
+                                                                        /* DISABLES CODE */ ( )
+myenv.cpp:11094:5: warning: 'tp_print' is deprecated [-Wdeprecated-declarations]
+    0,
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/cpython/object.h:260:5: note: 'tp_print' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/pyport.h:515:54: note: expanded from macro 'Py_DEPRECATED'
+#define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                     ^
+4 warnings generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % python test.py 
+Traceback (most recent call last):
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/test.py", line 2, in <module>
+    import myenv  # Assuming 'myenv' is the compiled Cython module
+ModuleNotFoundError: No module named 'myenv'
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/arrayobject.h:4:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/ndarraytypes.h:1969:
+/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+myenv.cpp:6398:3: warning: 'tp_print' is deprecated [-Wdeprecated-declarations]
+  0, /*tp_print*/
+  ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/cpython/object.h:260:5: note: 'tp_print' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/pyport.h:515:54: note: expanded from macro 'Py_DEPRECATED'
+#define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                     ^
+myenv.cpp:9185:76: warning: code will never be executed [-Wunreachable-code]
+        if (__Pyx_PyTuple_SET_ITEM(argstuple, (Py_ssize_t)i, args[i]) < 0) goto bad;
+                                                                           ^~~~~~~~
+myenv.cpp:9185:73: note: silence by adding parentheses to mark code as explicitly dead
+        if (__Pyx_PyTuple_SET_ITEM(argstuple, (Py_ssize_t)i, args[i]) < 0) goto bad;
+                                                                        ^
+                                                                        /* DISABLES CODE */ ( )
+myenv.cpp:11094:5: warning: 'tp_print' is deprecated [-Wdeprecated-declarations]
+    0,
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/cpython/object.h:260:5: note: 'tp_print' has been explicitly marked deprecated here
+    Py_DEPRECATED(3.8) int (*tp_print)(PyObject *, FILE *, int);
+    ^
+/Users/anooprehman/opt/anaconda3/include/python3.8/pyport.h:515:54: note: expanded from macro 'Py_DEPRECATED'
+#define Py_DEPRECATED(VERSION_UNUSED) __attribute__((__deprecated__))
+                                                     ^
+4 warnings generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % python test.py
+Traceback (most recent call last):
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/test.py", line 2, in <module>
+    import myenv  # Assuming 'myenv' is the compiled Cython module
+ModuleNotFoundError: No module named 'myenv'
+(venv) (base) anooprehman@anoop-air-2 general_model % ls
+CustomAntEnv.cpp        anoops_log.txt          compilecommands.txt     readme.md
+CustomAntEnv.h          asset_components.py     myenv.cpp               research
+Environment.h           body_components.py      myenv.pyx               setup.py
+StepResult.h            build                   ppo_agent.py            test.py
+(venv) (base) anooprehman@anoop-air-2 general_model % [200~python setup.py clean --all
+zsh: bad pattern: [200~python
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all 
+
+running clean
+removing 'build/temp.macosx-12.5-arm64-3.9' (and everything under it)
+'build/lib.macosx-12.5-arm64-3.9' does not exist -- can't clean it
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+(venv) (base) anooprehman@anoop-air-2 general_model % rm -rf build
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+creating build
+creating build/temp.macosx-12.5-arm64-3.9
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from CustomAntEnv.cpp:1:
+./CustomAntEnv.h:8:10: fatal error: 'mujoco/mujoco.h' file not found
+#include <mujoco/mujoco.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+error: command '/usr/bin/clang' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all        
+
+running clean
+removing 'build/temp.macosx-12.5-arm64-3.9' (and everything under it)
+'build/lib.macosx-12.5-arm64-3.9' does not exist -- can't clean it
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+removing 'build'
+(venv) (base) anooprehman@anoop-air-2 general_model % rm -rf build                       
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all
+
+running clean
+'build/lib.macosx-12.5-arm64-3.9' does not exist -- can't clean it
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+(venv) (base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include
+error: unable to open output file 'build/temp.macosx-10.9-x86_64-3.8/myenv.o': 'No such file or directory'
+1 error generated.
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all
+
+running clean
+'build/lib.macosx-12.5-arm64-3.9' does not exist -- can't clean it
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+(venv) (base) anooprehman@anoop-air-2 general_model % rm -rf build               
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+creating build
+creating build/temp.macosx-12.5-arm64-3.9
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from CustomAntEnv.cpp:1:
+./CustomAntEnv.h:8:10: fatal error: 'mujoco/mujoco.h' file not found
+#include <mujoco/mujoco.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+error: command '/usr/bin/clang' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from CustomAntEnv.cpp:1:
+./CustomAntEnv.h:7:10: fatal error: 'mujoco.h' file not found
+#include <mujoco.h>
+         ^~~~~~~~~~
+1 error generated.
+error: command '/usr/bin/clang' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % cd /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include/mujoco
+(venv) (base) anooprehman@anoop-air-2 mujoco % ls
+mjdata.h        mjmacro.h       mjplugin.h      mjthread.h      mjui.h          mjxmacro.h
+mjexport.h      mjmodel.h       mjrender.h      mjtnum.h        mjvisualize.h   mujoco.h
+(venv) (base) anooprehman@anoop-air-2 mujoco % python setup.py clean --all        
+
+python: can't open file '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include/mujoco/setup.py': [Errno 2] No such file or directory
+(venv) (base) anooprehman@anoop-air-2 mujoco % cd /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model         
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all
+
+running clean
+removing 'build/temp.macosx-12.5-arm64-3.9' (and everything under it)
+'build/lib.macosx-12.5-arm64-3.9' does not exist -- can't clean it
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+removing 'build'
+(venv) (base) anooprehman@anoop-air-2 general_model % rm -rf build                       
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all
+
+running clean
+'build/lib.macosx-12.5-arm64-3.9' does not exist -- can't clean it
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+creating build
+creating build/temp.macosx-12.5-arm64-3.9
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from CustomAntEnv.cpp:1:
+./CustomAntEnv.h:7:10: fatal error: 'mujoco.h' file not found
+#include <mujoco.h>
+         ^~~~~~~~~~
+1 error generated.
+error: command '/usr/bin/clang' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all        
+
+running clean
+removing 'build/temp.macosx-12.5-arm64-3.9' (and everything under it)
+'build/lib.macosx-12.5-arm64-3.9' does not exist -- can't clean it
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+removing 'build'
+(venv) (base) anooprehman@anoop-air-2 general_model % rm -rf build                       
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+creating build
+creating build/temp.macosx-12.5-arm64-3.9
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+CustomAntEnv.cpp:9:10: fatal error: 'tinyxml2.h' file not found
+#include "tinyxml2.h"
+         ^~~~~~~~~~~~
+1 error generated.
+error: command '/usr/bin/clang' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % echo "all i did here was change #include <mujoco.h> to #include <mujoco/mujoco.h> in Environment.h and CustomAntEnv.h"
+all i did here was change #include <mujoco.h> to #include <mujoco/mujoco.h> in Environment.h and CustomAntEnv.h
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+(venv) (base) anooprehman@anoop-air-2 general_model % brew install tinyxml2
+
+==> Downloading https://formulae.brew.sh/api/formula.jws.json
+#################################################################################################### 100.0%
+==> Downloading https://formulae.brew.sh/api/cask.jws.json
+#################################################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/tinyxml2/manifests/10.0.0
+#################################################################################################### 100.0%
+==> Fetching tinyxml2
+==> Downloading https://ghcr.io/v2/homebrew/core/tinyxml2/blobs/sha256:47b57551b8a816d40ee5c0f63e9293b8a9cf
+#################################################################################################### 100.0%
+==> Pouring tinyxml2--10.0.0.arm64_monterey.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/tinyxml2/10.0.0: 13 files, 225KB
+==> Running `brew cleanup tinyxml2`...
+Disable this behaviour by setting HOMEBREW_NO_INSTALL_CLEANUP.
+Hide these hints with HOMEBREW_NO_ENV_HINTS (see `man brew`).
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+CustomAntEnv.cpp:333:11: warning: unused variable 'ACTION_DIMS' [-Wunused-const-variable]
+const int ACTION_DIMS = 12;
+          ^
+CustomAntEnv.cpp:334:11: warning: unused variable 'MAX_OBSERVATION_SIZE' [-Wunused-const-variable]
+const int MAX_OBSERVATION_SIZE = 342;
+          ^
+2 warnings generated.
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c GLFWWindowManager.cpp -o build/temp.macosx-12.5-arm64-3.9/GLFWWindowManager.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+clang: error: no such file or directory: 'GLFWWindowManager.cpp'
+clang: error: no input files
+error: command '/usr/bin/clang' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+CustomAntEnv.cpp:333:11: warning: unused variable 'ACTION_DIMS' [-Wunused-const-variable]
+const int ACTION_DIMS = 12;
+          ^
+CustomAntEnv.cpp:334:11: warning: unused variable 'MAX_OBSERVATION_SIZE' [-Wunused-const-variable]
+const int MAX_OBSERVATION_SIZE = 342;
+          ^
+2 warnings generated.
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c myenv.cpp -o build/temp.macosx-12.5-arm64-3.9/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929:
+/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+creating build/lib.macosx-12.5-arm64-3.9
+/usr/bin/clang++ -bundle -undefined dynamic_lookup -L/opt/homebrew/opt/ncurses/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/readline/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -Wl,-rpath,/Users/anooprehman/.pyenv/versions/3.9.6/lib -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -L/opt/homebrew/opt/ncurses/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/readline/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -Wl,-rpath,/Users/anooprehman/.pyenv/versions/3.9.6/lib -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o build/temp.macosx-12.5-arm64-3.9/myenv.o -L/opt/homebrew/opt/glfw/lib -L/opt/homebrew/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -lglfw -ltinyxml2 -o build/lib.macosx-12.5-arm64-3.9/myenv.cpython-39-darwin.so -F/Applications -framework mujoco -Wl,-rpath,/Applications/MuJoCo.app/Contents/Frameworks -L/opt/homebrew/opt/llvm/lib -L/opt/homebrew/Cellar/llvm/17.0.6_1/lib/c++ -lc++
+ld: framework not found mujoco
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+error: command '/usr/bin/clang++' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all        
+
+running clean
+removing 'build/temp.macosx-12.5-arm64-3.9' (and everything under it)
+removing 'build/lib.macosx-12.5-arm64-3.9' (and everything under it)
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+removing 'build'
+(venv) (base) anooprehman@anoop-air-2 general_model % rm -rf build                       
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace
+
+running build_ext
+building 'myenv' extension
+creating build
+creating build/temp.macosx-12.5-arm64-3.9
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+CustomAntEnv.cpp:333:11: warning: unused variable 'ACTION_DIMS' [-Wunused-const-variable]
+const int ACTION_DIMS = 12;
+          ^
+CustomAntEnv.cpp:334:11: warning: unused variable 'MAX_OBSERVATION_SIZE' [-Wunused-const-variable]
+const int MAX_OBSERVATION_SIZE = 342;
+          ^
+2 warnings generated.
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c myenv.cpp -o build/temp.macosx-12.5-arm64-3.9/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929:
+/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+creating build/lib.macosx-12.5-arm64-3.9
+/usr/bin/clang++ -bundle -undefined dynamic_lookup -L/opt/homebrew/opt/ncurses/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/readline/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -Wl,-rpath,/Users/anooprehman/.pyenv/versions/3.9.6/lib -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -L/opt/homebrew/opt/ncurses/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/readline/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -Wl,-rpath,/Users/anooprehman/.pyenv/versions/3.9.6/lib -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o build/temp.macosx-12.5-arm64-3.9/myenv.o -L/opt/homebrew/opt/glfw/lib -L/opt/homebrew/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -lglfw -ltinyxml2 -o build/lib.macosx-12.5-arm64-3.9/myenv.cpython-39-darwin.so -F/Applications -framework mujoco -Wl,-rpath,/Applications/MuJoCo.app/Contents/Frameworks -L/opt/homebrew/opt/llvm/lib -L/opt/homebrew/Cellar/llvm/17.0.6_1/lib/c++ -lc++
+ld: framework not found mujoco
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+error: command '/usr/bin/clang++' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py clean --all        
+
+running clean
+removing 'build/temp.macosx-12.5-arm64-3.9' (and everything under it)
+removing 'build/lib.macosx-12.5-arm64-3.9' (and everything under it)
+'build/bdist.macosx-12.5-arm64' does not exist -- can't clean it
+'build/scripts-3.9' does not exist -- can't clean it
+removing 'build'
+(venv) (base) anooprehman@anoop-air-2 general_model % rm -rf build                       
+(venv) (base) anooprehman@anoop-air-2 general_model % echo "just downloaded mujoco app from the website"
+just downloaded mujoco app from the website
+(venv) (base) anooprehman@anoop-air-2 general_model % python setup.py build_ext --inplace               
+
+running build_ext
+building 'myenv' extension
+creating build
+creating build/temp.macosx-12.5-arm64-3.9
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c CustomAntEnv.cpp -o build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+CustomAntEnv.cpp:333:11: warning: unused variable 'ACTION_DIMS' [-Wunused-const-variable]
+const int ACTION_DIMS = 12;
+          ^
+CustomAntEnv.cpp:334:11: warning: unused variable 'MAX_OBSERVATION_SIZE' [-Wunused-const-variable]
+const int MAX_OBSERVATION_SIZE = 342;
+          ^
+2 warnings generated.
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -DOPENSSL_NO_SSL3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/include -I/Users/anooprehman/.pyenv/versions/3.9.6/include/python3.9 -c myenv.cpp -o build/temp.macosx-12.5-arm64-3.9/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes
+In file included from myenv.cpp:1272:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/arrayobject.h:5:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/ndarrayobject.h:12:
+In file included from /Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/ndarraytypes.h:1929:
+/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:17:2: warning: "Using deprecated NumPy API, disable it with "          "#define NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-W#warnings]
+#warning "Using deprecated NumPy API, disable it with " \
+ ^
+1 warning generated.
+creating build/lib.macosx-12.5-arm64-3.9
+/usr/bin/clang++ -bundle -undefined dynamic_lookup -L/opt/homebrew/opt/ncurses/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/readline/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -Wl,-rpath,/Users/anooprehman/.pyenv/versions/3.9.6/lib -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib -L/opt/homebrew/opt/ncurses/lib -L/opt/homebrew/opt/readline/lib -L/opt/homebrew/opt/readline/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -Wl,-rpath,/Users/anooprehman/.pyenv/versions/3.9.6/lib -L/opt/homebrew/lib -Wl,-rpath,/opt/homebrew/lib -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib build/temp.macosx-12.5-arm64-3.9/CustomAntEnv.o build/temp.macosx-12.5-arm64-3.9/myenv.o -L/opt/homebrew/opt/glfw/lib -L/opt/homebrew/lib -L/Users/anooprehman/.pyenv/versions/3.9.6/lib -lglfw -ltinyxml2 -o build/lib.macosx-12.5-arm64-3.9/myenv.cpython-39-darwin.so -F/Applications -framework mujoco -Wl,-rpath,/Applications/MuJoCo.app/Contents/Frameworks -L/opt/homebrew/opt/llvm/lib -L/opt/homebrew/Cellar/llvm/17.0.6_1/lib/c++ -lc++
+ld: framework not found mujoco
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+error: command '/usr/bin/clang++' failed with exit code 1
+(venv) (base) anooprehman@anoop-air-2 general_model % 

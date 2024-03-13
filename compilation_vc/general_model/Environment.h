@@ -4,7 +4,8 @@
 #include <string>
 #include <vector>
 #include "CustomAntEnv.h" // Custom environment class for MuJoCo simulation
-#include <mujoco.h>
+// #include <mujoco.h>
+#include <mujoco/mujoco.h>
 #include <GLFW/glfw3.h>
 #include <Eigen/Dense>
 #include "StepResult.h"

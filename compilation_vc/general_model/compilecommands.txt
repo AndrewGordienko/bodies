@@ -6,3 +6,12 @@ andrewgordienko@Andrews-MacBook-Pro fib % andrewgordienko@Andrews-MacBook-Pro te
 -I/usr/local/include -I/opt/homebrew/opt/eigen/include/eigen3 \
 -L/opt/homebrew/lib -lglfw -F/Applications \
 -framework mujoco -Wl,-rpath,/Applications/MuJoCo.app/Contents/Frameworks \ basic.cpp -o main
+
+
+
+FOR ANOOP:
+
+(base) anooprehman@anoop-air-2 general_model % /usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/mujoco/include
+
+
+/usr/bin/clang -Wno-unused-result -Wsign-compare -Wunreachable-code -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/include -arch x86_64 -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Applications/mujoco.framework/Versions/A/Headers -I/opt/homebrew/opt/eigen/include/eigen3 -I/usr/local/include -I/opt/homebrew/include -I/Users/anooprehman/opt/anaconda3/lib/python3.8/site-packages/numpy/core/include -I/Users/anooprehman/opt/anaconda3/include/python3.8 -c myenv.cpp -o build/temp.macosx-10.9-x86_64-3.8/myenv.o -std=c++17 -fcolor-diagnostics -fansi-escape-codes -I/usr/local/include -I/usr/local/include/eigen3 -I/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include
