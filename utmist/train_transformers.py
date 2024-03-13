@@ -1,4 +1,5 @@
-from soccer_env import SoccerEnv, ReplayBuffer
+from soccer_env import SoccerEnv
+from learningsoccertheory import ReplayBuffer
 import random
 import torch
 import torch.nn as nn
