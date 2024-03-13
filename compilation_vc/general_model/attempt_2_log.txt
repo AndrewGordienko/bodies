@@ -1,0 +1,1012 @@
+
+Creature Position: 0.197144 0.898482
+Flag Position: 0 0
+Horizontal Distance: 0.919856
+bottom bread 
+top bread 
+Creature Position: 0.0199406 0.0663663
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0692972
+bottom bread 
+top bread 
+Creature Position: 0.992247 0.109272
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998246
+bottom bread 
+top bread 
+Creature Position:   -0.0295412 -5.94992e-06
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0295412
+bottom bread 
+22 52
+top bread 
+Creature Position: -6.49561 -6.49334
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.18458
+bottom bread 
+top bread 
+Creature Position:   0.996588 -0.0561639
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.998169
+bottom bread 
+top bread 
+Creature Position: 0.0525056  0.738921
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.740784
+bottom bread 
+top bread 
+Creature Position: 0.00152667  -0.321508
+Flag Position: 0 0
+Horizontal Distance: 0.321511
+bottom bread 
+top bread 
+Creature Position:  0.898389 -0.389617
+Flag Position: 0 0
+Horizontal Distance: 0.979237
+bottom bread 
+top bread 
+Creature Position: 0.201349 0.854494
+Flag Position: 0 0
+Horizontal Distance: 0.877897
+bottom bread 
+top bread 
+Creature Position: 0.0261835 0.0680615
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0729242
+bottom bread 
+top bread 
+Creature Position: 0.989892 0.130287
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998429
+bottom bread 
+top bread 
+Creature Position:    -0.015165 -7.28799e-06
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.015165
+bottom bread 
+Learning at step 20 for episode 0
+23 54
+top bread 
+Creature Position: -6.49529 -6.49272
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.18391
+bottom bread 
+top bread 
+Creature Position:   0.996194 -0.0572229
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.997836
+bottom bread 
+top bread 
+Creature Position: 0.0569157  0.726603
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.728829
+bottom bread 
+top bread 
+Creature Position: 0.00205243  -0.336933
+Flag Position: 0 0
+Horizontal Distance: 0.336939
+bottom bread 
+top bread 
+Creature Position:  0.890992 -0.405053
+Flag Position: 0 0
+Horizontal Distance: 0.978742
+bottom bread 
+top bread 
+Creature Position: 0.203273 0.867956
+Flag Position: 0 0
+Horizontal Distance: 0.891441
+bottom bread 
+top bread 
+Creature Position: 0.0254483 0.0637003
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0685955
+bottom bread 
+top bread 
+Creature Position: 0.984144 0.169459
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998627
+bottom bread 
+top bread 
+Creature Position:  -0.00876265 -8.89088e-06
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.00876265
+bottom bread 
+24 56
+top bread 
+Creature Position: -6.49496 -6.49206
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.18321
+bottom bread 
+top bread 
+Creature Position:   0.995808 -0.0576533
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.997476
+bottom bread 
+top bread 
+Creature Position: 0.0613956  0.709642
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.712293
+bottom bread 
+top bread 
+Creature Position: -0.000673909    -0.352251
+Flag Position: 0 0
+Horizontal Distance: 0.352252
+bottom bread 
+top bread 
+Creature Position:  0.895867 -0.393647
+Flag Position: 0 0
+Horizontal Distance: 0.978538
+bottom bread 
+top bread 
+Creature Position: 0.204855 0.900691
+Flag Position: 0 0
+Horizontal Distance: 0.923693
+bottom bread 
+top bread 
+Creature Position: 0.0214155 0.0571676
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0610472
+bottom bread 
+top bread 
+Creature Position: 0.977413 0.205268
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998735
+bottom bread 
+top bread 
+Creature Position:  -0.00784189 -1.05603e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.00784189
+bottom bread 
+25 58
+top bread 
+Creature Position:  -6.4946 -6.49149
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.18255
+bottom bread 
+top bread 
+Creature Position:   0.995323 -0.0595278
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.997101
+bottom bread 
+top bread 
+Creature Position: 0.0657384  0.664542
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.667785
+bottom bread 
+top bread 
+Creature Position: -0.016838 -0.369149
+Flag Position: 0 0
+Horizontal Distance: 0.369533
+bottom bread 
+top bread 
+Creature Position:  0.890704 -0.405939
+Flag Position: 0 0
+Horizontal Distance: 0.978847
+bottom bread 
+top bread 
+Creature Position: 0.204291  0.91675
+Flag Position: 0 0
+Horizontal Distance: 0.939237
+bottom bread 
+top bread 
+Creature Position: 0.0176747 0.0523162
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0552212
+bottom bread 
+top bread 
+Creature Position: 0.970454 0.236035
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998746
+bottom bread 
+top bread 
+Creature Position:  -0.00521638 -1.25676e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0052164
+bottom bread 
+27 60
+top bread 
+Creature Position: -6.49423 -6.49097
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.18192
+bottom bread 
+top bread 
+Creature Position:    0.99486 -0.0607815
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.996715
+bottom bread 
+top bread 
+Creature Position: 0.0699817  0.619429
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.62337
+bottom bread 
+top bread 
+Creature Position: -0.0328754  -0.384428
+Flag Position: 0 0
+Horizontal Distance: 0.385831
+bottom bread 
+top bread 
+Creature Position:  0.895824 -0.395293
+Flag Position: 0 0
+Horizontal Distance: 0.979162
+bottom bread 
+top bread 
+Creature Position: 0.203077 0.942741
+Flag Position: 0 0
+Horizontal Distance: 0.964365
+bottom bread 
+top bread 
+Creature Position: 0.0121721 0.0470285
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0485781
+bottom bread 
+top bread 
+Creature Position:  0.97084 0.234088
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998663
+bottom bread 
+top bread 
+Creature Position:  -0.00877387 -1.47583e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.00877388
+bottom bread 
+28 62
+top bread 
+Creature Position: -6.49374 -6.49056
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.18129
+bottom bread 
+top bread 
+Creature Position:   0.994559 -0.0591256
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.996315
+bottom bread 
+top bread 
+Creature Position: 0.0741236  0.628106
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.632465
+bottom bread 
+top bread 
+Creature Position: -0.0319279   -0.40303
+Flag Position: 0 0
+Horizontal Distance: 0.404293
+bottom bread 
+top bread 
+Creature Position:  0.901233 -0.382415
+Flag Position: 0 0
+Horizontal Distance: 0.97901
+bottom bread 
+top bread 
+Creature Position: 0.203399 0.950447
+Flag Position: 0 0
+Horizontal Distance: 0.971968
+bottom bread 
+top bread 
+Creature Position: 0.0201703 0.0491449
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0531231
+bottom bread 
+top bread 
+Creature Position: 0.976634 0.208407
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998623
+bottom bread 
+top bread 
+Creature Position:   -0.0118423 -1.69561e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0118423
+bottom bread 
+29 64
+top bread 
+Creature Position: -6.49322 -6.49025
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.1807
+bottom bread 
+top bread 
+Creature Position:   0.994176 -0.0583448
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.995886
+bottom bread 
+top bread 
+Creature Position: 0.0781534  0.651744
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.656413
+bottom bread 
+top bread 
+Creature Position: -0.016901 -0.414403
+Flag Position: 0 0
+Horizontal Distance: 0.414748
+bottom bread 
+top bread 
+Creature Position:  0.900816 -0.380781
+Flag Position: 0 0
+Horizontal Distance: 0.97799
+bottom bread 
+top bread 
+Creature Position: 0.206596 0.937354
+Flag Position: 0 0
+Horizontal Distance: 0.959851
+bottom bread 
+top bread 
+Creature Position: 0.0374922 0.0549825
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0665488
+bottom bread 
+top bread 
+Creature Position: 0.971132 0.233229
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998746
+bottom bread 
+top bread 
+Creature Position:  -0.00491075 -1.92332e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.00491079
+bottom bread 
+30 66
+top bread 
+Creature Position: -6.49278 -6.48966
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17997
+bottom bread 
+top bread 
+Creature Position:  0.993839 -0.055681
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.995397
+bottom bread 
+top bread 
+Creature Position: 0.0826477  0.688786
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.693727
+bottom bread 
+top bread 
+Creature Position: 0.00614598  -0.422955
+Flag Position: 0 0
+Horizontal Distance: 0.423
+bottom bread 
+top bread 
+Creature Position:  0.899237 -0.381797
+Flag Position: 0 0
+Horizontal Distance: 0.976932
+bottom bread 
+top bread 
+Creature Position: 0.208029 0.948142
+Flag Position: 0 0
+Horizontal Distance: 0.970695
+bottom bread 
+top bread 
+Creature Position: 0.0449814 0.0526384
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0692396
+bottom bread 
+top bread 
+Creature Position: 0.961907  0.26915
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998853
+bottom bread 
+top bread 
+Creature Position: -0.000918237 -2.15655e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.000918491
+bottom bread 
+31 68
+top bread 
+Creature Position: -6.49235 -6.48896
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17918
+bottom bread 
+top bread 
+Creature Position:  0.993488 -0.052674
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.994884
+bottom bread 
+top bread 
+Creature Position: 0.0872444  0.700953
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.706362
+bottom bread 
+top bread 
+Creature Position: 0.0153138 -0.434409
+Flag Position: 0 0
+Horizontal Distance: 0.434679
+bottom bread 
+top bread 
+Creature Position:  0.889707 -0.403147
+Flag Position: 0 0
+Horizontal Distance: 0.976783
+bottom bread 
+top bread 
+Creature Position: 0.206618 0.967989
+Flag Position: 0 0
+Horizontal Distance: 0.989795
+bottom bread 
+top bread 
+Creature Position: 0.0475282 0.0461962
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0662798
+bottom bread 
+top bread 
+Creature Position: 0.951608 0.303631
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998874
+bottom bread 
+top bread 
+Creature Position:  -0.00212079 -2.39566e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.00212092
+bottom bread 
+32 70
+top bread 
+Creature Position: -6.49187  -6.4884
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17844
+bottom bread 
+top bread 
+Creature Position:   0.993048 -0.0513944
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.994377
+bottom bread 
+top bread 
+Creature Position: 0.0915816  0.671727
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.677941
+bottom bread 
+top bread 
+Creature Position: -0.00247045   -0.450763
+Flag Position: 0 0
+Horizontal Distance: 0.45077
+bottom bread 
+top bread 
+Creature Position:  0.873377 -0.438879
+Flag Position: 0 0
+Horizontal Distance: 0.977447
+bottom bread 
+top bread 
+Creature Position: 0.205654 0.978224
+Flag Position: 0 0
+Horizontal Distance: 0.999608
+bottom bread 
+top bread 
+Creature Position:  0.047609 0.0419167
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.063432
+bottom bread 
+top bread 
+Creature Position: 0.941272 0.334037
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998786
+bottom bread 
+top bread 
+Creature Position:  -0.00353716 -2.65833e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.00353726
+bottom bread 
+33 72
+top bread 
+Creature Position: -6.49139  -6.4879
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17774
+bottom bread 
+top bread 
+Creature Position:   0.992649 -0.0495167
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.993883
+bottom bread 
+top bread 
+Creature Position: 0.0957017  0.639147
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.646272
+bottom bread 
+top bread 
+Creature Position: -0.0237231  -0.466344
+Flag Position: 0 0
+Horizontal Distance: 0.466947
+bottom bread 
+top bread 
+Creature Position:  0.857409 -0.471042
+Flag Position: 0 0
+Horizontal Distance: 0.978279
+bottom bread 
+top bread 
+Creature Position: 0.203043 0.990513
+Flag Position: 0 0
+Horizontal Distance: 1.01111
+bottom bread 
+top bread 
+Creature Position: 0.0441003 0.0364323
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0572028
+bottom bread 
+top bread 
+Creature Position: 0.939943 0.336969
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998519
+bottom bread 
+top bread 
+Creature Position:   -0.0122542 -2.91361e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0122543
+bottom bread 
+Learning at step 30 for episode 0
+34 74
+top bread 
+Creature Position: -6.49068 -6.48748
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17695
+bottom bread 
+top bread 
+Creature Position:   0.992327 -0.0454434
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.993367
+bottom bread 
+top bread 
+Creature Position: 0.0998344  0.616463
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.624494
+bottom bread 
+top bread 
+Creature Position: -0.0496759  -0.490196
+Flag Position: 0 0
+Horizontal Distance: 0.492707
+bottom bread 
+top bread 
+Creature Position:  0.858139 -0.471654
+Flag Position: 0 0
+Horizontal Distance: 0.979214
+bottom bread 
+top bread 
+Creature Position: 0.198871 0.993997
+Flag Position: 0 0
+Horizontal Distance: 1.0137
+bottom bread 
+top bread 
+Creature Position: 0.0516765 0.0371127
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0636224
+bottom bread 
+top bread 
+Creature Position: 0.942162 0.329768
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998206
+bottom bread 
+top bread 
+Creature Position:   -0.0208082 -3.16883e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0208083
+bottom bread 
+35 76
+top bread 
+Creature Position: -6.48991  -6.4871
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17613
+bottom bread 
+top bread 
+Creature Position:  0.991994 -0.040474
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.99282
+bottom bread 
+top bread 
+Creature Position: 0.104044 0.612833
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.621602
+bottom bread 
+top bread 
+Creature Position: -0.0608452  -0.509932
+Flag Position: 0 0
+Horizontal Distance: 0.513549
+bottom bread 
+top bread 
+Creature Position:  0.851397 -0.484443
+Flag Position: 0 0
+Horizontal Distance: 0.979572
+bottom bread 
+top bread 
+Creature Position: 0.195685 0.992895
+Flag Position: 0 0
+Horizontal Distance: 1.01199
+bottom bread 
+top bread 
+Creature Position:  0.068958 0.0400093
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0797242
+bottom bread 
+top bread 
+Creature Position: 0.932296  0.35654
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.998147
+bottom bread 
+top bread 
+Creature Position:   -0.0213466 -3.42888e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0213466
+bottom bread 
+36 78
+top bread 
+Creature Position: -6.48929 -6.48651
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17528
+bottom bread 
+top bread 
+Creature Position:    0.99165 -0.0341423
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.992237
+bottom bread 
+top bread 
+Creature Position:  0.1085 0.64139
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.650503
+bottom bread 
+top bread 
+Creature Position: -0.0470441  -0.522162
+Flag Position: 0 0
+Horizontal Distance: 0.524277
+bottom bread 
+top bread 
+Creature Position:  0.837188 -0.506996
+Flag Position: 0 0
+Horizontal Distance: 0.978739
+bottom bread 
+top bread 
+Creature Position: 0.194378 0.995982
+Flag Position: 0 0
+Horizontal Distance: 1.01477
+bottom bread 
+top bread 
+Creature Position: 0.0748462 0.0347634
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0825254
+bottom bread 
+top bread 
+Creature Position: 0.918475 0.390348
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.997982
+bottom bread 
+top bread 
+Creature Position:   -0.0248358 -3.68833e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0248358
+bottom bread 
+37 80
+top bread 
+Creature Position: -6.48868 -6.48615
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17459
+bottom bread 
+top bread 
+Creature Position:    0.99133 -0.0278587
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.991721
+bottom bread 
+top bread 
+Creature Position: 0.112338 0.658806
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.668315
+bottom bread 
+top bread 
+Creature Position: -0.0370492   -0.53078
+Flag Position: 0 0
+Horizontal Distance: 0.532071
+bottom bread 
+top bread 
+Creature Position:  0.819675 -0.534683
+Flag Position: 0 0
+Horizontal Distance: 0.978649
+bottom bread 
+top bread 
+Creature Position: 0.191187 0.996611
+Flag Position: 0 0
+Horizontal Distance: 1.01478
+bottom bread 
+top bread 
+Creature Position: 0.0750066 0.0337385
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0822452
+bottom bread 
+top bread 
+Creature Position: 0.904864 0.419815
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.997509
+bottom bread 
+top bread 
+Creature Position:   -0.0293451 -3.97343e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0293451
+bottom bread 
+38 82
+top bread 
+Creature Position: -6.48808 -6.48583
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17394
+bottom bread 
+top bread 
+Creature Position:   0.990974 -0.0217324
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.991212
+bottom bread 
+top bread 
+Creature Position: 0.115991 0.672865
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.68279
+bottom bread 
+top bread 
+Creature Position: -0.0269283  -0.538487
+Flag Position: 0 0
+Horizontal Distance: 0.53916
+bottom bread 
+top bread 
+Creature Position:  0.801468 -0.561851
+Flag Position: 0 0
+Horizontal Distance: 0.978789
+bottom bread 
+top bread 
+Creature Position: 0.187258 0.996136
+Flag Position: 0 0
+Horizontal Distance: 1.01358
+bottom bread 
+top bread 
+Creature Position: 0.0751527  0.032648
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0819379
+bottom bread 
+top bread 
+Creature Position: 0.889883 0.449657
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.997037
+bottom bread 
+top bread 
+Creature Position:   -0.0330001 -4.28516e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0330001
+bottom bread 
+39 84
+top bread 
+Creature Position: -6.48729 -6.48556
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17319
+bottom bread 
+top bread 
+Creature Position:   0.990575 -0.0143715
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.990679
+bottom bread 
+top bread 
+Creature Position: 0.119732 0.671965
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.682548
+bottom bread 
+top bread 
+Creature Position: -0.0381739  -0.554776
+Flag Position: 0 0
+Horizontal Distance: 0.556088
+bottom bread 
+top bread 
+Creature Position:  0.806862 -0.555283
+Flag Position: 0 0
+Horizontal Distance: 0.979472
+bottom bread 
+top bread 
+Creature Position: 0.185701 0.995318
+Flag Position: 0 0
+Horizontal Distance: 1.01249
+bottom bread 
+top bread 
+Creature Position: 0.0793072 0.0352509
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0867886
+bottom bread 
+top bread 
+Creature Position: 0.877206 0.472752
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.996487
+bottom bread 
+top bread 
+Creature Position:  -0.0354768 -4.6251e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0354768
+bottom bread 
+40 86
+top bread 
+Creature Position: -6.48656 -6.48541
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17257
+bottom bread 
+top bread 
+Creature Position:    0.990143 -0.00735336
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.99017
+bottom bread 
+top bread 
+Creature Position: 0.123141 0.695464
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.706281
+bottom bread 
+top bread 
+Creature Position: -0.0198143  -0.562718
+Flag Position: 0 0
+Horizontal Distance: 0.563067
+bottom bread 
+top bread 
+Creature Position:  0.791323 -0.576869
+Flag Position: 0 0
+Horizontal Distance: 0.97927
+bottom bread 
+top bread 
+Creature Position: 0.180766 0.995245
+Flag Position: 0 0
+Horizontal Distance: 1.01153
+bottom bread 
+top bread 
+Creature Position: 0.0806462 0.0398671
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0899622
+bottom bread 
+top bread 
+Creature Position: 0.861313 0.500166
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.996005
+bottom bread 
+top bread 
+Creature Position:   -0.0338059 -4.96996e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0338059
+bottom bread 
+41 88
+top bread 
+Creature Position: -6.48571 -6.48534
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17192
+bottom bread 
+top bread 
+Creature Position:   0.989674 0.00129611
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.989675
+bottom bread 
+top bread 
+Creature Position: 0.126356 0.710966
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.722107
+bottom bread 
+top bread 
+Creature Position: -0.0114088  -0.573781
+Flag Position: 0 0
+Horizontal Distance: 0.573894
+bottom bread 
+top bread 
+Creature Position:  0.800754 -0.563853
+Flag Position: 0 0
+Horizontal Distance: 0.979356
+bottom bread 
+top bread 
+Creature Position: 0.179923 0.994306
+Flag Position: 0 0
+Horizontal Distance: 1.01045
+bottom bread 
+top bread 
+Creature Position: 0.0813329 0.0455486
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0932186
+bottom bread 
+top bread 
+Creature Position: 0.868972 0.484455
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.994892
+bottom bread 
+top bread 
+Creature Position:   -0.0434734 -5.33259e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0434735
+bottom bread 
+42 90
+top bread 
+Creature Position: -6.48505 -6.48494
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17117
+bottom bread 
+top bread 
+Creature Position:  0.989044 0.0104129
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.989098
+bottom bread 
+top bread 
+Creature Position:  0.13023 0.735601
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.74704
+bottom bread 
+top bread 
+Creature Position: 0.0129476 -0.580579
+Flag Position: 0 0
+Horizontal Distance: 0.580723
+bottom bread 
+top bread 
+Creature Position:  0.784446 -0.585567
+Flag Position: 0 0
+Horizontal Distance: 0.9789
+bottom bread 
+top bread 
+Creature Position:   0.1747 0.990771
+Flag Position: 0 0
+Horizontal Distance: 1.00606
+bottom bread 
+top bread 
+Creature Position: 0.0752351  0.040877
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0856227
+bottom bread 
+top bread 
+Creature Position: 0.855988  0.50615
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.994436
+bottom bread 
+top bread 
+Creature Position:   -0.0482687 -5.71888e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0482687
+bottom bread 
+43 92
+top bread 
+Creature Position: -6.48434 -6.48463
+Flag Position: 1.49167e-154  2.4632e-314
+Horizontal Distance: 9.17045
+bottom bread 
+top bread 
+Creature Position:  0.988343 0.0188722
+Flag Position: 1.49167e-154            0
+Horizontal Distance: 0.988523
+bottom bread 
+top bread 
+Creature Position: 0.133942 0.759063
+Flag Position: 3.62604e-217 2.50086e-314
+Horizontal Distance: 0.77079
+bottom bread 
+top bread 
+Creature Position: 0.0456267 -0.584519
+Flag Position: 0 0
+Horizontal Distance: 0.586297
+bottom bread 
+top bread 
+Creature Position:  0.765523 -0.609058
+Flag Position: 0 0
+Horizontal Distance: 0.978252
+bottom bread 
+top bread 
+Creature Position: 0.168343 0.987721
+Flag Position: 0 0
+Horizontal Distance: 1.00196
+bottom bread 
+top bread 
+Creature Position: 0.0700539 0.0392564
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.0803032
+bottom bread 
+top bread 
+Creature Position: 0.839458 0.532679
+Flag Position: 2.122e-314          0
+Horizontal Distance: 0.994201
+bottom bread 
+top bread 
+Creature Position:   -0.0469975 -6.12472e-05
+Flag Position: 2.4632e-314           0
+Horizontal Distance: 0.0469975
+bottom bread 
+Learning at step 40 for episode 0
+^CTraceback (most recent call last):
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/test.py", line 120, in <module>
+    agent.learn()
+  File "/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/compilation_vc/general_model/ppo_agent.py", line 205, in learn
+    self.actor.optimizer.step()
+  File "/Users/anooprehman/.pyenv/versions/3.9.6/lib/python3.9/site-packages/torch/optim/optimizer.py", line 385, in wrapper
+    out = func(*args, **kwargs)
+  File "/Users/anooprehman/.pyenv/versions/3.9.6/lib/python3.9/site-packages/torch/optim/optimizer.py", line 76, in _use_grad
+    ret = func(self, *args, **kwargs)
+  File "/Users/anooprehman/.pyenv/versions/3.9.6/lib/python3.9/site-packages/torch/optim/adam.py", line 166, in step
+    adam(
+  File "/Users/anooprehman/.pyenv/versions/3.9.6/lib/python3.9/site-packages/torch/optim/adam.py", line 316, in adam
+    func(params,
+  File "/Users/anooprehman/.pyenv/versions/3.9.6/lib/python3.9/site-packages/torch/optim/adam.py", line 439, in _single_tensor_adam
+    denom = (exp_avg_sq.sqrt() / bias_correction2_sqrt).add_(eps)
+KeyboardInterrupt
+python(58151,0x100760580) malloc: *** error for object 0x12db4c200: pointer being freed was not allocated
+python(58151,0x100760580) malloc: *** set a breakpoint in malloc_error_break to debug
+zsh: abort      python test.py
+(base) anooprehman@anoop-air-2 general_model % echo "OKK i just copy pasted xml_world_episode_0.xml from andrew's folder into this directory, and it works now!!!!!"
+dquote> 
+echo "OKK i just copy pasted xml_world_episode_0.xml from andrew's folder into this directory, and it works nowpython test.pypython test.py
+(base) anooprehman@anoop-air-2 general_model % 
