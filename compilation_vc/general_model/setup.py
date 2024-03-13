@@ -16,12 +16,12 @@ TINYXML2_INCLUDE_DIR = '/opt/homebrew/include'
 extensions = [
     Extension(
         name="myenv",
-        # sources=["myenv.pyx", 'GLFWWindowManager.cpp', "CustomAntEnv.cpp", "not_environment.cpp"],
-        sources=["myenv.pyx", "CustomAntEnv.cpp"],
+        sources=["myenv.pyx", 'GLFWWindowManager.cpp', "CustomAntEnv.cpp", "not_environment.cpp"],
+        # sources=["myenv.pyx", "CustomAntEnv.cpp"],
         include_dirs=[
             np.get_include(),  # NumPy headers
-            '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include',  # MuJoCo headers
-            # '/Applications/mujoco.framework/Versions/A/Headers',  # MuJoCo headers
+            # '/Users/anooprehman/Documents/uoft/extracurricular/design_teams/utmist2/bodies/venv/lib/python3.9/site-packages/mujoco/include',  # MuJoCo headers
+            '/Applications/mujoco.framework/Versions/A/Headers',  # MuJoCo headers
             EIGEN_INCLUDE_DIR,  # Eigen headers
             '/usr/local/include',  # Additional dependencies
             TINYXML2_INCLUDE_DIR,  # tinyxml2 headers
