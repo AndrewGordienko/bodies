@@ -503,71 +503,89 @@ class BipedalWalker(gym.Env, EzPickle):
         return self.step(np.array([0.0, 0.0, 0.0, 0.0]))[0], {}
 
     def step(self, action: np.ndarray):
-        assert self.hull is not None  # Ensure the hull exists before proceeding
+        assert self.hull is not None
 
-        # Simulate the environment step
+        # Process each action based on the actual number of joints
+        for i in range(len(action)):
+            # Check if the joint for the current action exists
+            if i < len(self.joints):
+                joint = self.joints[i]
+                if i % 2 == 0:  # Hip joint
+                    # For hip joints, use SPEED_HIP for motor speed calculation
+                    joint.motorSpeed = float(SPEED_HIP * np.sign(action[i]))
+                    joint.maxMotorTorque = float(MOTORS_TORQUE * np.clip(np.abs(action[i]), 0, 1))
+                else:  # Knee joint
+                    # For knee joints, use SPEED_KNEE for motor speed calculation
+                    joint.motorSpeed = float(SPEED_KNEE * np.sign(action[i]))
+                    joint.maxMotorTorque = float(MOTORS_TORQUE * np.clip(np.abs(action[i]), 0, 1))
+
         self.world.Step(1.0 / FPS, 6 * 30, 2 * 30)
-
-        # Initialize observation vector with fixed size to accommodate maximum configuration
-        # [hull angle, hull angular velocity, hull velocity x, hull velocity y] + [joint states] + [ground contact flags] + [lidar]
-        max_joints = 8  # Max joints (2 legs * 2 subparts * 2 states (angle, speed) per joint)
-        max_contacts = 2  # Max legs for ground contact flags
-        lidar_measurements = 10
-        observation = [0] * (4 + max_joints + max_contacts + lidar_measurements)
 
         pos = self.hull.position
         vel = self.hull.linearVelocity
 
-        # Populate initial part of the observation with hull data
-        observation[:4] = [self.hull.angle, self.hull.angularVelocity / FPS, vel.x * (VIEWPORT_W / SCALE) / FPS, vel.y * (VIEWPORT_H / SCALE) / FPS]
+        # Initial observations related to the hull
+        observation = [
+            self.hull.angle,  # Hull angle
+            2.0 * self.hull.angularVelocity / FPS,  # Hull angular velocity
+            0.3 * vel.x * (VIEWPORT_W / SCALE) / FPS,  # Normalized horizontal speed
+            0.3 * vel.y * (VIEWPORT_H / SCALE) / FPS  # Normalized vertical speed
+        ]
 
-        # Populate the joint and ground contact information based on current configuration
-        joint_data_idx = 4  # Start index for joint data
-        for leg_id in range(len(self.subparts_per_leg)):  # Use actual number of legs
-            for subpart_id in range(self.subparts_per_leg[leg_id]):  # Use actual number of subparts per leg
-                joint_idx = leg_id * 2 + subpart_id  # Calculate the global joint index based on leg and subpart ID
-                if joint_idx < len(self.joints):  # Check if the joint exists
-                    joint = self.joints[joint_idx]
-                    observation[joint_data_idx] = joint.angle
-                    observation[joint_data_idx + 1] = joint.speed / (SPEED_HIP if subpart_id == 0 else SPEED_KNEE)
-                joint_data_idx += 2  # Move to the next pair of joint data slots, even if the joint doesn't exist
+        # Joint and ground contact observations placeholders
+        joints_obs = [0.0] * 8  # 4 joints (hip and knee for each leg) * 2 (angle and speed)
+        ground_contact_obs = [0.0] * 2  # Ground contact for each leg
 
-            # Assuming the last subpart checks for ground contact, fill with zero if non-existent
-            last_leg_index = leg_id * 2 + (self.subparts_per_leg[leg_id] - 1)
-            if last_leg_index < len(self.legs):  # Check if the leg exists
-                observation[max_joints + leg_id] = 1.0 if self.legs[last_leg_index].ground_contact else 0.0
+        # Fill in the joints and ground contact observations
+        for i, joint in enumerate(self.joints):
+            joints_obs[i * 2] = joint.angle
+            joints_obs[i * 2 + 1] = joint.speed / SPEED_HIP if i % 2 == 0 else joint.speed / SPEED_KNEE
+        
+        for i, leg in enumerate(self.legs):
+            if i < 2:  # Ensuring only two legs are considered
+                ground_contact_obs[i] = 1.0 if leg.ground_contact else 0.0
 
-        # Process lidar data at the end of the observation
-        lidar_start_idx = 4 + max_joints + max_contacts  # Start index for lidar data in the observation
+        # Add joint and ground contact observations to the main observation
+        observation += joints_obs + ground_contact_obs
+
+        # Lidar observations
+        lidar_obs = [0.0] * 10  # Placeholder for 10 lidar measurements
         for i in range(10):
-            self.lidar[i].fraction = 1.0
-            self.lidar[i].p1 = pos
-            self.lidar[i].p2 = (
-                pos[0] + math.sin(1.5 * i / 10.0) * LIDAR_RANGE,
-                pos[1] - math.cos(1.5 * i / 10.0) * LIDAR_RANGE,
+            lidar = self.lidar[i]
+            lidar.fraction = 1.0
+            lidar.p1 = pos
+            lidar.p2 = (
+                pos[0] + math.sin(i / 10.0 * math.pi * 2) * LIDAR_RANGE,
+                pos[1] - math.cos(i / 10.0 * math.pi * 2) * LIDAR_RANGE
             )
-            self.world.RayCast(self.lidar[i], self.lidar[i].p1, self.lidar[i].p2)
-            observation[lidar_start_idx + i] = self.lidar[i].fraction
+            self.world.RayCast(lidar, lidar.p1, lidar.p2)
+            lidar_obs[i] = lidar.fraction
+        
+        # Combine all observations
+        observation += lidar_obs
+
+        # Ensure observation length is exactly 24
+        assert len(observation) == 24
+
+        # Reward calculation
+        reward = 0
+        if pos.x > (TERRAIN_LENGTH - TERRAIN_GRASS) * TERRAIN_STEP:
+            reward = 100.0  # Complete the course
+        reward -= 0.00035 * MOTORS_TORQUE * np.sum(np.abs(action))  # Penalty for action use
+
+        # Check if done
+        done = False
+        if self.game_over or pos.x < 0:
+            done = True
+            reward = -100  # Penalty for failing
+
+        # Additional info, such as if the episode should be truncated (not used here)
+        info = {}
 
         self.scroll = pos.x - VIEWPORT_W / SCALE / 5
 
-        # Reward calculation as per your environment's logic
-        shaping = 130 * pos[0] / SCALE - 5.0 * abs(observation[0])  # Reward for moving forward and keeping the hull angle straight
-        reward = shaping if self.prev_shaping is None else shaping - self.prev_shaping
-        self.prev_shaping = shaping
-        for a_val in action:
-            reward -= 0.00035 * MOTORS_TORQUE * np.clip(abs(a_val), 0, 1)  # Energy penalty
+        return np.array(observation, dtype=np.float32), reward, done, info
 
-        terminated = False
-        if self.game_over or pos[0] < 0 or pos[0] > (TERRAIN_LENGTH - TERRAIN_GRASS) * TERRAIN_STEP:
-            reward = -100
-            terminated = True
-
-        # Optionally render the environment if in human mode
-        if self.render_mode == "human":
-            self.render()
-
-        return np.array(observation, dtype=np.float32), reward, terminated, False, {}
 
     def render(self):
         if self.render_mode is None:
