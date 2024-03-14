@@ -69,8 +69,15 @@ def create_assets_xml():
 
     return assets
 
-def create_floor_xml(size=(10, 10, 0.1)):
-    return ET.Element('geom', attrib={'name': 'floor', 'type': 'plane', 'size': ' '.join(map(str, size)), 'pos': '0 0 0', 'material': 'MatCheckered'})
+def create_floor_xml(size=(10, 10, 0.1), friction=(1.0, 0.005, 0.0001)):
+    return ET.Element('geom', attrib={
+        'name': 'floor', 
+        'type': 'plane', 
+        'size': ' '.join(map(str, size)), 
+        'pos': '0 0 0', 
+        'material': 'MatCheckered',
+        'friction': ' '.join(map(str, friction))
+        })
 
 def create_flag_xml(flag_id, layer, color, center_position, dynamic_radius):
     # Use dynamic_radius instead of a static radius
@@ -130,7 +137,8 @@ def create_ant_model(flag_radius):
     mujoco_model.append(create_assets_xml())
     worldbody = ET.SubElement(mujoco_model, 'worldbody')
     world_size = (10, 10, 0.1)  # Define the world size
-    worldbody.append(create_floor_xml(size=world_size))
+    world_friction = (1.0, 0.005, 0.0001)
+    worldbody.append(create_floor_xml(size=world_size, friction=world_friction))
 
     # gravity
     option = ET.SubElement(mujoco_model, 'option')
@@ -168,6 +176,9 @@ def create_ant_model(flag_radius):
         worldbody.append(torso_xml)
 
         worldbody.append(create_flag_xml(creature_id, layer, color, initial_position, flag_radius))
+
+        # offset initial_position
+        initial_position = (initial_position[0] + 1.5, initial_position[1], initial_position[2])
 
         # worldbody.append(create_ball_with_joint_xml(f'ball_{creature_id}', initial_position, (0.5, 0.5, 0.5)))
         worldbody.append(create_ball_with_joint_xml(f'ball_{creature_id}', initial_position, (0.1, 0.1, 0.1)))

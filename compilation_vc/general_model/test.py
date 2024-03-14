@@ -115,7 +115,7 @@ for episode in range(0, 15):
             _observation = observation[creature_id]
             agent.remember(_observation, actions[creature_id], log_probs[creature_id], values[creature_id], _reward, done)
 
-        if steps % 10 == 0 and episode % 2 == 0:
+        if steps % 10 == 0 and episode % 2 == 1:
             print(f"Learning at step {steps} for episode {episode}")
             agent.learn()
         if episode % 2 == 1:
