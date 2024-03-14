@@ -132,6 +132,11 @@ def create_ant_model(flag_radius):
     world_size = (10, 10, 0.1)  # Define the world size
     worldbody.append(create_floor_xml(size=world_size))
 
+    # gravity
+    option = ET.SubElement(mujoco_model, 'option')
+    option.set('gravity', '0 0 -9.81')  # add gravity in -z direction
+
+
     actuator = ET.SubElement(mujoco_model, 'actuator')
 
     colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange', 'pink', 'grey', 'brown']
@@ -164,7 +169,8 @@ def create_ant_model(flag_radius):
 
         worldbody.append(create_flag_xml(creature_id, layer, color, initial_position, flag_radius))
 
-        worldbody.append(create_ball_with_joint_xml(f'ball_{creature_id}', initial_position, (0.5, 0.5, 0.5)))
+        # worldbody.append(create_ball_with_joint_xml(f'ball_{creature_id}', initial_position, (0.5, 0.5, 0.5)))
+        worldbody.append(create_ball_with_joint_xml(f'ball_{creature_id}', initial_position, (0.1, 0.1, 0.1)))
 
         num_legs = random.randint(1, 4)
         leg_size = 0.04
