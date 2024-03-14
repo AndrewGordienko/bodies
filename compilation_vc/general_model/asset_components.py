@@ -90,6 +90,27 @@ def create_flag_xml(flag_id, layer, color, center_position, dynamic_radius):
         'conaffinity': str(layer)
     })
 
+def create_ball_with_joint_xml(name, pos, size):
+    # Create the main body element
+    body = ET.Element('body', attrib={
+        'name': name,
+        'pos': ' '.join(map(str, pos))
+    })
+
+    # Create the geom element as a child of the body
+    geom = ET.SubElement(body, 'geom', attrib={
+        'type': 'sphere',
+        'size': ' '.join(map(str, size)),
+        'material': 'MatPlane'
+    })
+
+    # Create a free joint element as a child of the body
+    joint = ET.SubElement(body, 'freejoint', attrib={
+        'name': f'{name}_joint'
+    })
+
+    return body
+
 
 def create_wall_xml(name, pos, size):
     return ET.Element('geom', attrib={
@@ -142,6 +163,8 @@ def create_ant_model(flag_radius):
         worldbody.append(torso_xml)
 
         worldbody.append(create_flag_xml(creature_id, layer, color, initial_position, flag_radius))
+
+        worldbody.append(create_ball_with_joint_xml(f'ball_{creature_id}', initial_position, (0.5, 0.5, 0.5)))
 
         num_legs = random.randint(1, 4)
         leg_size = 0.04
