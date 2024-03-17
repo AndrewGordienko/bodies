@@ -1867,7 +1867,9 @@ def convert_json_to_blueprint(json_input):
 
     return blueprint
 
-blueprint = convert_json_to_blueprint(json_input_full_allseg)
+#blueprint = convert_json_to_blueprint(json_input_full_allseg)
+f = open('blueprint.json')
+blueprint = convert_json_to_blueprint(json.load(f))
 
 manual_blueprint = {
     '0': {
