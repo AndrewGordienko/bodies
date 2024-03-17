@@ -122,7 +122,7 @@ def create_target_players_heatmap(experiences):
 # Instantiate the models and replay buffer
 replay_buffer = ReplayBuffer(10000)
 env = SoccerEnv()
-env.play_game(random_policy, replay_buffer, num_games=100)
+env.play_game(random_policy, replay_buffer, num_games=1)
 
 model_ball = BallTransformerSeq()
 optimizer_ball = torch.optim.Adam(model_ball.parameters(), lr=0.001)
@@ -130,8 +130,11 @@ optimizer_ball = torch.optim.Adam(model_ball.parameters(), lr=0.001)
 model_players = PlayersTransformerSeq()
 optimizer_players = torch.optim.Adam(model_players.parameters(), lr=0.001)
 
-num_epochs = 10
+num_epochs = 20
 batch_size = 32
+
+ball_losses = []
+players_losses = []
 
 for epoch in tqdm(range(num_epochs), desc="Training"):
     batch = random.sample(replay_buffer.buffer, batch_size)
@@ -155,6 +158,17 @@ for epoch in tqdm(range(num_epochs), desc="Training"):
     optimizer_players.step()
 
     print(f"Epoch {epoch+1}/{num_epochs}, Ball Loss: {ball_loss.item():.6f}, Players Loss: {players_loss.item():.6f}")
+
+    ball_losses.append(ball_loss.item())
+    players_losses.append(players_loss.item())
+
+
+plt.plot(ball_losses, label='Ball Transformer Loss')
+plt.plot(players_losses, label='Players Transformer Loss')
+plt.xlabel('Epochs')
+plt.ylabel('MSE Loss')
+plt.legend()
+plt.show()
 
 torch.save(model_ball.state_dict(), 'model.pth')
 torch.save(model_players.state_dict(), 'model.pth')
