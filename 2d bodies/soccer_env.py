@@ -1,6 +1,7 @@
 import pygame
 import numpy as np
 import random
+import math
 
 class ReplayBuffer:
     def __init__(self, capacity):
@@ -54,6 +55,9 @@ class SoccerEnv:
             'B1': [self.GRID_WIDTH // 2 + 2, self.GRID_HEIGHT // 2 - 1],
             'B2': [self.GRID_WIDTH // 2 + 2, self.GRID_HEIGHT // 2 + 1]
         }
+        
+        self.teamA_distances_in_episode = []
+        self.teamB_distances_in_episode = []
 
         self.game_history = []
 
@@ -67,6 +71,7 @@ class SoccerEnv:
 
     def step(self, actions):
         for player, action in actions.items():
+            #print("Position of player", player, ":", self.player_positions[player])
             if player == self.ball_possession and "SHOOT" in action:
                 self.ball_possession = None
                 if action == 'SHOOT_LEFT':
@@ -112,7 +117,13 @@ class SoccerEnv:
             self.ball_possession = random.choice(['A1', 'A2', 'B1', 'B2'])
 
             goal_scored = True
-
+        
+        distA = np.linalg.norm((np.array(self.player_positions["A2"])-np.array(self.player_positions["A1"])))
+        distB = np.linalg.norm((np.array(self.player_positions["B2"])-np.array(self.player_positions["B1"])))
+        
+        self.teamA_distances_in_episode.append(distA)
+        self.teamB_distances_in_episode.append(distB)
+        
         return goal_scored
 
 
@@ -151,6 +162,8 @@ class SoccerEnv:
                 
                 if goal_scored:
                     print("End of this game")
+                    print("Team A avg distance:", sum(self.teamA_distances_in_episode)/len(self.teamA_distances_in_episode))
+                    print("Team B avg distance:", sum(self.teamB_distances_in_episode)/len(self.teamB_distances_in_episode))
                     break
 
             games_played += 1

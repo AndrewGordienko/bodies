@@ -122,7 +122,7 @@ def create_target_players_heatmap(experiences):
 # Instantiate the models and replay buffer
 replay_buffer = ReplayBuffer(10000)
 env = SoccerEnv()
-env.play_game(random_policy, replay_buffer, num_games=1)
+env.play_game(random_policy, replay_buffer, num_games=5)
 
 model_ball = BallTransformerSeq()
 optimizer_ball = torch.optim.Adam(model_ball.parameters(), lr=0.001)
